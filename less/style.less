@@ -1,0 +1,89 @@
+body
+{
+  .remove-user-selection;
+}
+
+.container
+{
+  width: 600px;
+  margin: auto;
+}
+
+#checkersTable
+{
+
+}
+
+.checkers-cell
+{
+  float:left;
+  width: 75px;
+  height: 75px;
+}
+
+.checkers-piece
+{
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  margin-top: 15px;
+  border: 3px solid black;
+  .rounded-corners(25px);
+}
+
+.selected
+{
+  .box-shadow(black);
+}
+
+.checkers-cell[data-color='false']
+{
+  background-color: black;
+}
+
+.checkers-cell[data-color='true']
+{
+  background-color: white;
+}
+
+.checkers-piece[data-color='1']
+{
+  background-color: red;
+}
+
+.checkers-piece[data-color='0']
+{
+  background-color: blue;
+}
+
+
+.rounded-corners (@radius: 5px)
+{
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+};
+
+.box-inset-shadow() {
+  box-shadow: 0px 1px 3px #000000 inset;
+  -webkit-box-shadow: 0px 1px 3px #000000 inset;
+  -moz-box-shadow: 0px 1px 3px #000000 inset;
+};
+
+.box-shadow(@color: #FFFFFF, @spread: 12px){
+  box-shadow: 0 0 @spread @color;
+  -webkit-box-shadow: 0 0 @spread @color;
+  -moz-box-shadow: 0 0 @spread @color;
+};
+
+.remove-user-selection()
+{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

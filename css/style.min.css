@@ -1,0 +1,9 @@
+body{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.container{width:600px;margin:auto;}
+.checkers-cell{float:left;width:75px;height:75px;}
+.checkers-piece{width:40px;height:40px;margin:auto;margin-top:15px;border:3px solid black;-webkit-border-radius:25px;-moz-border-radius:25px;-ms-border-radius:25px;-o-border-radius:25px;border-radius:25px;}
+.selected{box-shadow:0 0 12px #000000;-webkit-box-shadow:0 0 12px #000000;-moz-box-shadow:0 0 12px #000000;}
+.checkers-cell[data-color='false']{background-color:black;}
+.checkers-cell[data-color='true']{background-color:white;}
+.checkers-piece[data-color='1']{background-color:red;}
+.checkers-piece[data-color='0']{background-color:blue;}
