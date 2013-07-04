@@ -1,0 +1,20 @@
+{
+	"general": {
+	},
+	"ios": {
+		"profiles": {
+			"DEFAULT": {
+				"provisioning_profile": ""
+			}
+		}
+	},
+	"android": {
+		"sdk": "",
+		"profiles": {
+			"DEFAULT": {
+				"keystore": "",
+				"keyalias": ""
+			}
+		}
+	}
+}

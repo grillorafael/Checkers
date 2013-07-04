@@ -1,5 +1,6 @@
 var table = [];
 var tableSize = 8;
+var ANIMATION_SPEED = 500;
 
 function initGame()
 {
@@ -27,19 +28,47 @@ function handleCellClick(cell)
         var cellRow = $(cell).parent(".checkers-row").attr('data-row');
         var toPositionObject = {row: cellRow, column: cellColumn};
 
-        if(selectedColumn != cellColumn && selectedRow != cellRow)
+        var possibleMoveMovements = getMoveActions(table, positionObject);
+        var possibleEatMovements = getEatActions(table, positionObject, [], []);
+
+        if(possibleMoveMovements.length > 0)
         {
-            movePiece(positionObject, toPositionObject);
+            for(var i = 0; i < possibleMoveMovements.length; i++)
+            {
+                if(possibleMoveMovements[i].row == toPositionObject.row && possibleMoveMovements[i].column == toPositionObject.column)
+                {
+                    movePiece(positionObject, toPositionObject);
+                    return;
+                }
+            }
         }
+
+        if(possibleEatMovements.length > 0)
+        {
+            for(var i = 0; i < possibleEatMovements.length; i++)
+            {
+                var possibleEatMovement = possibleEatMovements[i];
+                var lastMovementPosition = possibleEatMovement.movementPositions[possibleEatMovement.movementPositions.length - 1];
+                if(lastMovementPosition.row == toPositionObject.row && lastMovementPosition.column == toPositionObject.column)
+                {
+                    eatPiece(positionObject, possibleEatMovement);
+                }
+            }
+        }
+
     }
 }
 
 function handlePieceClick(piece)
 {
+    var hasClass = $(piece).hasClass("selected");
     $(".checkers-piece").each(function(index){
         $(this).removeClass("selected");
     });
-    $(piece).toggleClass("selected");
+    if(!hasClass)
+    {
+        $(piece).toggleClass("selected");
+    }
 }
 
 function initTable()
@@ -58,6 +87,7 @@ function initTable()
         }
         row += "</div>";
         wholeTable += row;
+        wholeTable += "<div class='clear-fix'></div>";
     }
     $("#checkersTable").html(wholeTable);
 }
@@ -84,8 +114,8 @@ function initPieces()
     {
         for(var j = i%2; j < tableSize; j+=2)
         {
-            table[i][j] = 0;
-            $("div[data-row='"+i+"'] .checkers-cell[data-column='"+j+"']").html(checkersPiece.replace("#color#", 0));
+            table[i][j] = TOP_PLAYER;
+            $("div[data-row='"+i+"'] .checkers-cell[data-column='"+j+"']").html(checkersPiece.replace("#color#", TOP_PLAYER));
         }
     }
 
@@ -93,12 +123,30 @@ function initPieces()
     {
         for(var j = i%2; j < tableSize; j+=2)
         {
-            table[i][j] = 1;
-            $("div[data-row='"+i+"'] .checkers-cell[data-column='"+j+"']").html(checkersPiece.replace("#color#", 1));
+            table[i][j] = BOTTOM_PLAYER;
+            $("div[data-row='"+i+"'] .checkers-cell[data-column='"+j+"']").html(checkersPiece.replace("#color#", BOTTOM_PLAYER));
         }
     }
 }
 
+
+function eatPiece(from, possibleEatMovement)
+{
+    var currentPosition = from;
+    for(var i = 0; i < possibleEatMovement.movementPositions.length; i++)
+    {
+        movePiece(currentPosition, possibleEatMovement.movementPositions[i]);
+
+        removePiece(possibleEatMovement.removedPiecesPosition[i]);
+        currentPosition = possibleEatMovement.movementPositions[i];
+    }
+}
+
+function removePiece(piecePosition)
+{
+    $("div[data-row='"+piecePosition.row+"'] .checkers-cell[data-column='"+piecePosition.column+"']").html("");
+    table[piecePosition.row][piecePosition.column] = EMPTY_CELL;
+}
 
 function movePiece(from, to)
 {
@@ -120,11 +168,15 @@ function movePiece(from, to)
         piece.animate({
             left: (toPosition.left + 12) + "px",
             top: toPosition.top + "px"
-        }, 500, function(){
+        }, ANIMATION_SPEED, function(){
             $("div[data-row='"+to.row+"'] .checkers-cell[data-column='"+to.column+"']").html(pieceHtml);
             $("div[data-row='"+from.row+"'] .checkers-cell[data-column='"+from.column+"']").html("");
             piece = $("div[data-row='"+to.row+"'] .checkers-cell[data-column='"+to.column+"']").find(".checkers-piece");
             piece.click(function(){handlePieceClick(this);});
+
+            table[to.row][to.column] = table[from.row][from.column];
+            table[from.row][from.column] = -1;
+            callback();
         });
     }
 }
