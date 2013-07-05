@@ -1,6 +1,8 @@
 var table = [];
 var tableSize = 8;
 var ANIMATION_SPEED = 500;
+var ENABLE_HINT = false;
+var currentTurn = TOP_PLAYER;
 
 function initGame()
 {
@@ -13,6 +15,27 @@ function addEventListeners()
 {
     $(".checkers-cell").click(function(){handleCellClick(this);});
     $(".checkers-piece").click(function(){handlePieceClick(this);});
+    $("#hint").click(function(){handleHintClick(this);});
+}
+
+function handleHintClick(button)
+{
+    ENABLE_HINT = !ENABLE_HINT;
+    if(!ENABLE_HINT)
+    {
+        removeCellHighlights();
+        $("#hint").html("I NEED A HINT!");
+    }
+    else
+    {
+        var selectedPiece = $(".checkers-piece.selected");
+        if(selectedPiece.length > 0)
+        {
+            highlightMoves(selectedPiece);
+        }
+        $("#hint").html("I DON'T NEED ANY HINT!");
+    }
+    $("#hint").attr("data-state", ENABLE_HINT);
 }
 
 function handleCellClick(cell)
@@ -20,55 +43,109 @@ function handleCellClick(cell)
     var selectedPiece = $(".checkers-piece.selected");
     if(selectedPiece)
     {
-        var selectedColumn = selectedPiece.parent(".checkers-column").attr('data-column');
-        var selectedRow = selectedPiece.parent(".checkers-column").parent(".checkers-row").attr('data-row');
-        var positionObject = {row: selectedRow, column: selectedColumn};
-
-        var cellColumn = $(cell).attr('data-column');
-        var cellRow = $(cell).parent(".checkers-row").attr('data-row');
-        var toPositionObject = {row: cellRow, column: cellColumn};
-
-        var possibleMoveMovements = getMoveActions(table, positionObject);
-        var possibleEatMovements = getEatActions(table, positionObject, [], []);
-
-        if(possibleMoveMovements.length > 0)
+        var pieceColor = selectedPiece.attr("data-color");
+        if(currentTurn == pieceColor)
         {
-            for(var i = 0; i < possibleMoveMovements.length; i++)
+            var selectedColumn = selectedPiece.parent(".checkers-column").attr('data-column');
+            var selectedRow = selectedPiece.parent(".checkers-column").parent(".checkers-row").attr('data-row');
+            var positionObject = {row: selectedRow, column: selectedColumn};
+
+            var cellColumn = $(cell).attr('data-column');
+            var cellRow = $(cell).parent(".checkers-row").attr('data-row');
+            var toPositionObject = {row: cellRow, column: cellColumn};
+
+            var possibleMoveMovements = getMoveActions(table, positionObject);
+            var possibleEatMovements = getEatActions(table, positionObject, [], []);
+
+            if(possibleMoveMovements.length > 0)
             {
-                if(possibleMoveMovements[i].row == toPositionObject.row && possibleMoveMovements[i].column == toPositionObject.column)
+                for(var i = 0; i < possibleMoveMovements.length; i++)
                 {
-                    movePiece(positionObject, toPositionObject);
-                    return;
+                    if(possibleMoveMovements[i].row == toPositionObject.row && possibleMoveMovements[i].column == toPositionObject.column)
+                    {
+                        movePiece(positionObject, toPositionObject, changeTurn());
+                        return;
+                    }
+                }
+            }
+
+            if(possibleEatMovements.length > 0)
+            {
+                for(var i = 0; i < possibleEatMovements.length; i++)
+                {
+                    var possibleEatMovement = possibleEatMovements[i];
+                    var lastMovementPosition = possibleEatMovement.movementPositions[possibleEatMovement.movementPositions.length - 1];
+                    if(lastMovementPosition.row == toPositionObject.row && lastMovementPosition.column == toPositionObject.column)
+                    {
+                        eatPiece(positionObject, possibleEatMovement);
+                    }
                 }
             }
         }
-
-        if(possibleEatMovements.length > 0)
-        {
-            for(var i = 0; i < possibleEatMovements.length; i++)
-            {
-                var possibleEatMovement = possibleEatMovements[i];
-                var lastMovementPosition = possibleEatMovement.movementPositions[possibleEatMovement.movementPositions.length - 1];
-                if(lastMovementPosition.row == toPositionObject.row && lastMovementPosition.column == toPositionObject.column)
-                {
-                    eatPiece(positionObject, possibleEatMovement);
-                }
-            }
-        }
-
     }
 }
 
 function handlePieceClick(piece)
 {
     var hasClass = $(piece).hasClass("selected");
+    removeCellHighlights();
+    removePieceSelections();
+
+    var pieceColor = $(piece).attr("data-color");
+    if(pieceColor == currentTurn)
+    {
+        if(!hasClass)
+        {
+            $(piece).toggleClass("selected");
+        }
+    }
+
+    if(ENABLE_HINT &&  $(piece).hasClass("selected"))
+    {
+        highlightMoves($(piece));
+    }
+}
+
+function highlightMoves(piece)
+{
+    var selectedColumn = piece.parent(".checkers-column").attr('data-column');
+    var selectedRow = piece.parent(".checkers-column").parent(".checkers-row").attr('data-row');
+    var positionObject = {row: selectedRow, column: selectedColumn};
+
+    var possibleMoveMovements = getMoveActions(table, positionObject);
+    var possibleEatMovements = getEatActions(table, positionObject, [], []);
+
+    for(var i = 0; i < possibleMoveMovements.length; i++)
+    {
+        addCellHighlight(possibleMoveMovements[i]);
+    }
+
+    for(var i = 0; i < possibleEatMovements.length; i++)
+    {
+        for(var j = 0; j < possibleEatMovements[i].movementPositions.length; j++)
+        {
+            addCellHighlight(possibleEatMovements[i].movementPositions[j]);
+        }
+    }
+}
+
+function addCellHighlight(position)
+{
+    $("div[data-row='"+position.row+"'] .checkers-cell[data-column='"+position.column+"']").addClass("highlight");
+}
+
+function removeCellHighlights()
+{
+    $(".checkers-cell").each(function(index){
+        $(this).removeClass("highlight");
+    });
+}
+
+function removePieceSelections()
+{
     $(".checkers-piece").each(function(index){
         $(this).removeClass("selected");
     });
-    if(!hasClass)
-    {
-        $(piece).toggleClass("selected");
-    }
 }
 
 function initTable()
@@ -129,13 +206,19 @@ function initPieces()
     }
 }
 
-
 function eatPiece(from, possibleEatMovement)
 {
     var currentPosition = from;
     for(var i = 0; i < possibleEatMovement.movementPositions.length; i++)
     {
-        movePiece(currentPosition, possibleEatMovement.movementPositions[i]);
+        if(i == possibleEatMovement.movementPositions.length - 1)
+        {
+            setTimeout(ANIMATION_SPEED + 10, movePiece(currentPosition, possibleEatMovement.movementPositions[i], changeTurn()));
+        }
+        else
+        {
+            setTimeout(ANIMATION_SPEED + 10, movePiece(currentPosition, possibleEatMovement.movementPositions[i]));
+        }
 
         removePiece(possibleEatMovement.removedPiecesPosition[i]);
         currentPosition = possibleEatMovement.movementPositions[i];
@@ -148,8 +231,12 @@ function removePiece(piecePosition)
     table[piecePosition.row][piecePosition.column] = EMPTY_CELL;
 }
 
-function movePiece(from, to)
+function movePiece(from, to, callback)
 {
+    if(arguments.length == 2)
+    {
+        callback = function(){};
+    }
     var piece = $("div[data-row='"+from.row+"'] .checkers-cell[data-column='"+from.column+"']").find(".checkers-piece");
     if(piece)
     {
@@ -175,8 +262,23 @@ function movePiece(from, to)
             piece.click(function(){handlePieceClick(this);});
 
             table[to.row][to.column] = table[from.row][from.column];
-            table[from.row][from.column] = -1;
+            table[from.row][from.column] = EMPTY_CELL;
+            removePieceSelections();
+            removeCellHighlights();
             callback();
         });
     }
+}
+
+function changeTurn()
+{
+    if(currentTurn)
+    {
+        currentTurn = TOP_PLAYER;
+    }
+    else
+    {
+        currentTurn = BOTTOM_PLAYER;
+    }
+    $("#turnShower").attr("data-color", currentTurn);
 }

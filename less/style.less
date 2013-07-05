@@ -1,5 +1,6 @@
 body
 {
+  font-family: helvetica;
   .remove-user-selection;
   font-size: 14px;
 }
@@ -9,15 +10,74 @@ body
   clear: both;
 }
 
+#hint
+{
+  line-height: 2em;
+  font-size: 2em;
+  text-align: center;
+  padding: 0.2em;
+  height: 2em;
+  margin-top: 0.2em;
+  font-weight: bold;
+  color: white;
+}
+
+#hint[data-state='true']
+{
+  background-color: green;
+}
+
+#hint[data-state='false']
+{
+  background-color: red;
+}
+
+.button:hover
+{
+  cursor: pointer;
+}
+
+.button
+{
+  .rounded-corners;
+}
+
 .container
 {
-  max-width: 800px;
+  border: 1px solid black;
+  width: 672px;
   margin: auto;
+  .rounded-corners;
+}
+
+.highlight
+{
+  .box-inset-shadow;
 }
 
 #checkersTable
 {
+  margin: auto;
+}
 
+#turnShower
+{
+  text-align: center;
+  line-height: 2em;
+  width: 100%;
+  height: 2em;
+  color: white;
+  font-weight: bold;
+}
+
+#turnShower[data-color='0']
+ {
+   background-color: blue;
+ }
+
+#turnShower[data-color='1']
+{
+  background-color: red;
 }
 
 .checkers-cell
@@ -73,9 +133,9 @@ body
 };
 
 .box-inset-shadow() {
-  box-shadow: 0px 1px 3px #000000 inset;
-  -webkit-box-shadow: 0px 1px 3px #000000 inset;
-  -moz-box-shadow: 0px 1px 3px #000000 inset;
+  box-shadow: 0px 0px 0px 6px yellow inset;
+  -webkit-box-shadow: 0px 0px 0px 6px yellow inset;
+  -moz-box-shadow: 0px 0px 0px 6px yellow inset;
 };
 
 .box-shadow(@color: #FFFFFF, @spread: 12px){

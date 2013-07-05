@@ -4,11 +4,13 @@
     <list default="true" id="74d6ffc1-5821-44d4-8e79-f4234186dc67" name="Default" comment="" />
     <ignored path="Checkers.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1372775722789" ignored="false" />
-    <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1372953386585" ignored="false" />
-    <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1372775958405" ignored="false" />
+    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373031961273" ignored="false" />
+    <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373032064900" ignored="false" />
+    <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373030641803" ignored="false" />
     <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1372951685214" ignored="false" />
     <file path="/constants.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1372948451621" ignored="false" />
+    <file path="$PROJECT_DIR$/js/main.min.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373032119196" ignored="false" />
+    <file path="$PROJECT_DIR$/css/style.min.css" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373027055966" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -57,7 +60,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -70,17 +72,106 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="19" selection-start="5046" selection-end="5046" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="26" column="42" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!block;n#initGame#0" expanded="false" />
+                <element signature="n#!!block;n#addEventListeners#0" expanded="false" />
+                <element signature="n#!!block;n#handleCellClick#0" expanded="false" />
+                <element signature="e#1829#2248#0" expanded="false" />
+                <element signature="e#1917#2234#0" expanded="false" />
+                <element signature="e#2078#2216#0" expanded="false" />
+                <element signature="e#2310#2883#0" expanded="false" />
+                <element signature="e#2397#2869#0" expanded="false" />
+                <element signature="e#2757#2851#0" expanded="false" />
+                <element signature="n#!!block;n#handlePieceClick#0" expanded="false" />
+                <element signature="e#3134#3229#0" expanded="false" />
+                <element signature="e#3166#3223#0" expanded="false" />
+                <element signature="e#3289#3330#0" expanded="false" />
+                <element signature="n#!!block;n#highlightMoves#0" expanded="false" />
+                <element signature="e#3824#3883#0" expanded="false" />
+                <element signature="e#3946#4131#0" expanded="false" />
+                <element signature="e#4038#4125#0" expanded="false" />
+                <element signature="n#!!block;n#addCellHighlight#0" expanded="false" />
+                <element signature="n#!!block;n#removeCellHighlights#0" expanded="false" />
+                <element signature="e#4369#4418#0" expanded="false" />
+                <element signature="n#!!block;n#removePieceSelections#0" expanded="false" />
+                <element signature="e#4504#4552#0" expanded="false" />
+                <element signature="n#!!block;n#initTable#0" expanded="false" />
+                <element signature="e#4688#5139#0" expanded="false" />
+                <element signature="e#4839#5026#0" expanded="false" />
+                <element signature="n#!!block;n#initTableStructure#0" expanded="false" />
+                <element signature="e#5267#5404#0" expanded="false" />
+                <element signature="e#5335#5372#0" expanded="false" />
+                <element signature="n#!!block;n#initPieces#0" expanded="false" />
+                <element signature="e#5599#5837#0" expanded="false" />
+                <element signature="e#5655#5831#0" expanded="false" />
+                <element signature="e#5894#6138#0" expanded="false" />
+                <element signature="e#5950#6132#0" expanded="false" />
+                <element signature="n#!!block;n#eatPiece#0" expanded="false" />
+                <element signature="e#6299#6807#0" expanded="false" />
+                <element signature="e#6375#6516#0" expanded="false" />
+                <element signature="e#6538#6665#0" expanded="false" />
+                <element signature="n#!!block;n#removePiece#0" expanded="false" />
+                <element signature="n#!!block;n#movePiece#0" expanded="false" />
+                <element signature="e#7104#7144#0" expanded="false" />
+                <element signature="e#7284#8531#0" expanded="false" />
+                <element signature="e#7639#7746#0" expanded="false" />
+                <element signature="e#7772#7871#0" expanded="false" />
+                <element signature="e#7900#8523#0" expanded="false" />
+                <element signature="n#!!block;n#changeTurn#0" expanded="false" />
+                <element signature="e#8583#8624#0" expanded="false" />
+                <element signature="e#8638#8682#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkers.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="checkers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/checkers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="68" selection-start="3008" selection-end="3077" vertical-scroll-proportion="0.019710906">
-              <folding />
+            <state line="32" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!block;n#getMoveActions#0" expanded="false" />
+                <element signature="e#358#624#0" expanded="false" />
+                <element signature="e#380#576#0" expanded="false" />
+                <element signature="e#505#566#0" expanded="false" />
+                <element signature="e#606#618#0" expanded="false" />
+                <element signature="n#!!block;n#getEatActions#0" expanded="false" />
+                <element signature="e#882#1248#0" expanded="false" />
+                <element signature="e#1258#2668#0" expanded="false" />
+                <element signature="e#1429#2662#0" expanded="false" />
+                <element signature="e#1461#1573#0" expanded="false" />
+                <element signature="e#1669#2652#0" expanded="false" />
+                <element signature="e#2319#2474#0" expanded="false" />
+                <element signature="e#2691#4101#0" expanded="false" />
+                <element signature="e#2862#4095#0" expanded="false" />
+                <element signature="e#2894#3006#0" expanded="false" />
+                <element signature="e#3102#4085#0" expanded="false" />
+                <element signature="e#3752#3907#0" expanded="false" />
+                <element signature="e#4124#5534#0" expanded="false" />
+                <element signature="e#4295#5528#0" expanded="false" />
+                <element signature="e#4327#4439#0" expanded="false" />
+                <element signature="e#4535#5518#0" expanded="false" />
+                <element signature="e#5185#5340#0" expanded="false" />
+                <element signature="e#5557#6967#0" expanded="false" />
+                <element signature="e#5728#6961#0" expanded="false" />
+                <element signature="e#5760#5872#0" expanded="false" />
+                <element signature="e#5968#6951#0" expanded="false" />
+                <element signature="e#6618#6773#0" expanded="false" />
+                <element signature="n#!!block;n#getDiagonalMoves#0" expanded="false" />
+                <element signature="e#7204#7415#0" expanded="false" />
+                <element signature="e#7233#7408#0" expanded="false" />
+                <element signature="e#7429#7640#0" expanded="false" />
+                <element signature="e#7458#7633#0" expanded="false" />
+                <element signature="n#!!block;n#concatLists#0" expanded="false" />
+                <element signature="e#7752#7789#0" expanded="false" />
+                <element signature="n#!!block;n#copyTable#0" expanded="false" />
+                <element signature="e#7906#8113#0" expanded="false" />
+                <element signature="e#8004#8066#0" expanded="false" />
+                <element signature="n#!!block;n#copyNodeList#0" expanded="false" />
+                <element signature="e#8253#8374#0" expanded="false" />
+                <element signature="e#8283#8367#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,16 +179,16 @@
       <file leaf-file-name="constants.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="18" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+            <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="31" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+            <state line="49" column="19" selection-start="549" selection-end="549" vertical-scroll-proportion="0.9302326">
               <folding />
             </state>
           </provider>
@@ -106,7 +197,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="24" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+            <state line="16" column="71" selection-start="720" selection-end="720" vertical-scroll-proportion="-3.2">
               <folding />
             </state>
           </provider>
@@ -123,11 +214,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/css/reset.css" />
-        <option value="$PROJECT_DIR$/less/style.less" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/constants.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/checkers.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/less/style.less" />
       </list>
     </option>
   </component>
@@ -164,6 +255,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -183,51 +275,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,8 +292,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -264,6 +313,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -292,19 +354,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -460,7 +509,55 @@
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="20" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#!!block;n#initGame#0" expanded="false" />
+            <element signature="n#!!block;n#addEventListeners#0" expanded="false" />
+            <element signature="n#!!block;n#handleCellClick#0" expanded="false" />
+            <element signature="e#1829#2248#0" expanded="false" />
+            <element signature="e#1917#2234#0" expanded="false" />
+            <element signature="e#2078#2216#0" expanded="false" />
+            <element signature="e#2310#2883#0" expanded="false" />
+            <element signature="e#2397#2869#0" expanded="false" />
+            <element signature="e#2757#2851#0" expanded="false" />
+            <element signature="n#!!block;n#handlePieceClick#0" expanded="false" />
+            <element signature="e#3134#3229#0" expanded="false" />
+            <element signature="e#3166#3223#0" expanded="false" />
+            <element signature="e#3289#3330#0" expanded="false" />
+            <element signature="n#!!block;n#highlightMoves#0" expanded="false" />
+            <element signature="e#3824#3883#0" expanded="false" />
+            <element signature="e#3946#4131#0" expanded="false" />
+            <element signature="e#4038#4125#0" expanded="false" />
+            <element signature="n#!!block;n#addCellHighlight#0" expanded="false" />
+            <element signature="n#!!block;n#removeCellHighlights#0" expanded="false" />
+            <element signature="e#4369#4418#0" expanded="false" />
+            <element signature="n#!!block;n#removePieceSelections#0" expanded="false" />
+            <element signature="e#4504#4552#0" expanded="false" />
+            <element signature="n#!!block;n#initTable#0" expanded="false" />
+            <element signature="e#4688#5139#0" expanded="false" />
+            <element signature="e#4839#5026#0" expanded="false" />
+            <element signature="n#!!block;n#initTableStructure#0" expanded="false" />
+            <element signature="e#5267#5404#0" expanded="false" />
+            <element signature="e#5335#5372#0" expanded="false" />
+            <element signature="n#!!block;n#initPieces#0" expanded="false" />
+            <element signature="e#5599#5837#0" expanded="false" />
+            <element signature="e#5655#5831#0" expanded="false" />
+            <element signature="e#5894#6138#0" expanded="false" />
+            <element signature="e#5950#6132#0" expanded="false" />
+            <element signature="n#!!block;n#eatPiece#0" expanded="false" />
+            <element signature="e#6299#6807#0" expanded="false" />
+            <element signature="e#6375#6516#0" expanded="false" />
+            <element signature="e#6538#6665#0" expanded="false" />
+            <element signature="n#!!block;n#removePiece#0" expanded="false" />
+            <element signature="n#!!block;n#movePiece#0" expanded="false" />
+            <element signature="e#7104#7144#0" expanded="false" />
+            <element signature="e#7284#8531#0" expanded="false" />
+            <element signature="e#7639#7746#0" expanded="false" />
+            <element signature="e#7772#7871#0" expanded="false" />
+            <element signature="e#7900#8523#0" expanded="false" />
+            <element signature="n#!!block;n#changeTurn#0" expanded="false" />
+            <element signature="e#8583#8624#0" expanded="false" />
+            <element signature="e#8638#8682#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -474,7 +571,55 @@
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="27" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#!!block;n#initGame#0" expanded="false" />
+            <element signature="n#!!block;n#addEventListeners#0" expanded="false" />
+            <element signature="n#!!block;n#handleCellClick#0" expanded="false" />
+            <element signature="e#1829#2248#0" expanded="false" />
+            <element signature="e#1917#2234#0" expanded="false" />
+            <element signature="e#2078#2216#0" expanded="false" />
+            <element signature="e#2310#2883#0" expanded="false" />
+            <element signature="e#2397#2869#0" expanded="false" />
+            <element signature="e#2757#2851#0" expanded="false" />
+            <element signature="n#!!block;n#handlePieceClick#0" expanded="false" />
+            <element signature="e#3134#3229#0" expanded="false" />
+            <element signature="e#3166#3223#0" expanded="false" />
+            <element signature="e#3289#3330#0" expanded="false" />
+            <element signature="n#!!block;n#highlightMoves#0" expanded="false" />
+            <element signature="e#3824#3883#0" expanded="false" />
+            <element signature="e#3946#4131#0" expanded="false" />
+            <element signature="e#4038#4125#0" expanded="false" />
+            <element signature="n#!!block;n#addCellHighlight#0" expanded="false" />
+            <element signature="n#!!block;n#removeCellHighlights#0" expanded="false" />
+            <element signature="e#4369#4418#0" expanded="false" />
+            <element signature="n#!!block;n#removePieceSelections#0" expanded="false" />
+            <element signature="e#4504#4552#0" expanded="false" />
+            <element signature="n#!!block;n#initTable#0" expanded="false" />
+            <element signature="e#4688#5139#0" expanded="false" />
+            <element signature="e#4839#5026#0" expanded="false" />
+            <element signature="n#!!block;n#initTableStructure#0" expanded="false" />
+            <element signature="e#5267#5404#0" expanded="false" />
+            <element signature="e#5335#5372#0" expanded="false" />
+            <element signature="n#!!block;n#initPieces#0" expanded="false" />
+            <element signature="e#5599#5837#0" expanded="false" />
+            <element signature="e#5655#5831#0" expanded="false" />
+            <element signature="e#5894#6138#0" expanded="false" />
+            <element signature="e#5950#6132#0" expanded="false" />
+            <element signature="n#!!block;n#eatPiece#0" expanded="false" />
+            <element signature="e#6299#6807#0" expanded="false" />
+            <element signature="e#6375#6516#0" expanded="false" />
+            <element signature="e#6538#6665#0" expanded="false" />
+            <element signature="n#!!block;n#removePiece#0" expanded="false" />
+            <element signature="n#!!block;n#movePiece#0" expanded="false" />
+            <element signature="e#7104#7144#0" expanded="false" />
+            <element signature="e#7284#8531#0" expanded="false" />
+            <element signature="e#7639#7746#0" expanded="false" />
+            <element signature="e#7772#7871#0" expanded="false" />
+            <element signature="e#7900#8523#0" expanded="false" />
+            <element signature="n#!!block;n#changeTurn#0" expanded="false" />
+            <element signature="e#8583#8624#0" expanded="false" />
+            <element signature="e#8638#8682#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -486,11 +631,6 @@
     <entry file="file://$PROJECT_DIR$/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="32" selection-start="421" selection-end="423" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/reset.css">
@@ -505,40 +645,138 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local_config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/style.less">
+    <entry file="file://$PROJECT_DIR$/js/main.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="19" selection-start="5046" selection-end="5046" vertical-scroll-proportion="0.0">
+        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/checkers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="68" selection-start="3008" selection-end="3077" vertical-scroll-proportion="0.019710906">
+        <state line="32" column="0" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#getMoveActions#0" expanded="false" />
+            <element signature="e#358#624#0" expanded="false" />
+            <element signature="e#380#576#0" expanded="false" />
+            <element signature="e#505#566#0" expanded="false" />
+            <element signature="e#606#618#0" expanded="false" />
+            <element signature="n#!!block;n#getEatActions#0" expanded="false" />
+            <element signature="e#882#1248#0" expanded="false" />
+            <element signature="e#1258#2668#0" expanded="false" />
+            <element signature="e#1429#2662#0" expanded="false" />
+            <element signature="e#1461#1573#0" expanded="false" />
+            <element signature="e#1669#2652#0" expanded="false" />
+            <element signature="e#2319#2474#0" expanded="false" />
+            <element signature="e#2691#4101#0" expanded="false" />
+            <element signature="e#2862#4095#0" expanded="false" />
+            <element signature="e#2894#3006#0" expanded="false" />
+            <element signature="e#3102#4085#0" expanded="false" />
+            <element signature="e#3752#3907#0" expanded="false" />
+            <element signature="e#4124#5534#0" expanded="false" />
+            <element signature="e#4295#5528#0" expanded="false" />
+            <element signature="e#4327#4439#0" expanded="false" />
+            <element signature="e#4535#5518#0" expanded="false" />
+            <element signature="e#5185#5340#0" expanded="false" />
+            <element signature="e#5557#6967#0" expanded="false" />
+            <element signature="e#5728#6961#0" expanded="false" />
+            <element signature="e#5760#5872#0" expanded="false" />
+            <element signature="e#5968#6951#0" expanded="false" />
+            <element signature="e#6618#6773#0" expanded="false" />
+            <element signature="n#!!block;n#getDiagonalMoves#0" expanded="false" />
+            <element signature="e#7204#7415#0" expanded="false" />
+            <element signature="e#7233#7408#0" expanded="false" />
+            <element signature="e#7429#7640#0" expanded="false" />
+            <element signature="e#7458#7633#0" expanded="false" />
+            <element signature="n#!!block;n#concatLists#0" expanded="false" />
+            <element signature="e#7752#7789#0" expanded="false" />
+            <element signature="n#!!block;n#copyTable#0" expanded="false" />
+            <element signature="e#7906#8113#0" expanded="false" />
+            <element signature="e#8004#8066#0" expanded="false" />
+            <element signature="n#!!block;n#copyNodeList#0" expanded="false" />
+            <element signature="e#8253#8374#0" expanded="false" />
+            <element signature="e#8283#8367#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="71" selection-start="720" selection-end="720" vertical-scroll-proportion="-3.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="42" selection-start="599" selection-end="599" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#initGame#0" expanded="false" />
+            <element signature="n#!!block;n#addEventListeners#0" expanded="false" />
+            <element signature="n#!!block;n#handleCellClick#0" expanded="false" />
+            <element signature="e#1829#2248#0" expanded="false" />
+            <element signature="e#1917#2234#0" expanded="false" />
+            <element signature="e#2078#2216#0" expanded="false" />
+            <element signature="e#2310#2883#0" expanded="false" />
+            <element signature="e#2397#2869#0" expanded="false" />
+            <element signature="e#2757#2851#0" expanded="false" />
+            <element signature="n#!!block;n#handlePieceClick#0" expanded="false" />
+            <element signature="e#3134#3229#0" expanded="false" />
+            <element signature="e#3166#3223#0" expanded="false" />
+            <element signature="e#3289#3330#0" expanded="false" />
+            <element signature="n#!!block;n#highlightMoves#0" expanded="false" />
+            <element signature="e#3824#3883#0" expanded="false" />
+            <element signature="e#3946#4131#0" expanded="false" />
+            <element signature="e#4038#4125#0" expanded="false" />
+            <element signature="n#!!block;n#addCellHighlight#0" expanded="false" />
+            <element signature="n#!!block;n#removeCellHighlights#0" expanded="false" />
+            <element signature="e#4369#4418#0" expanded="false" />
+            <element signature="n#!!block;n#removePieceSelections#0" expanded="false" />
+            <element signature="e#4504#4552#0" expanded="false" />
+            <element signature="n#!!block;n#initTable#0" expanded="false" />
+            <element signature="e#4688#5139#0" expanded="false" />
+            <element signature="e#4839#5026#0" expanded="false" />
+            <element signature="n#!!block;n#initTableStructure#0" expanded="false" />
+            <element signature="e#5267#5404#0" expanded="false" />
+            <element signature="e#5335#5372#0" expanded="false" />
+            <element signature="n#!!block;n#initPieces#0" expanded="false" />
+            <element signature="e#5599#5837#0" expanded="false" />
+            <element signature="e#5655#5831#0" expanded="false" />
+            <element signature="e#5894#6138#0" expanded="false" />
+            <element signature="e#5950#6132#0" expanded="false" />
+            <element signature="n#!!block;n#eatPiece#0" expanded="false" />
+            <element signature="e#6299#6807#0" expanded="false" />
+            <element signature="e#6375#6516#0" expanded="false" />
+            <element signature="e#6538#6665#0" expanded="false" />
+            <element signature="n#!!block;n#removePiece#0" expanded="false" />
+            <element signature="n#!!block;n#movePiece#0" expanded="false" />
+            <element signature="e#7104#7144#0" expanded="false" />
+            <element signature="e#7284#8531#0" expanded="false" />
+            <element signature="e#7639#7746#0" expanded="false" />
+            <element signature="e#7772#7871#0" expanded="false" />
+            <element signature="e#7900#8523#0" expanded="false" />
+            <element signature="n#!!block;n#changeTurn#0" expanded="false" />
+            <element signature="e#8583#8624#0" expanded="false" />
+            <element signature="e#8638#8682#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="19" selection-start="549" selection-end="549" vertical-scroll-proportion="0.9302326">
           <folding />
         </state>
       </provider>

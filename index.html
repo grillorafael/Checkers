@@ -5,7 +5,7 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=0.4">
     <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="/css/style.min.css"/>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/js/jquery-2.0.2.min.js"></script>
     <script src="/js/constants.js"></script>
     <script src="/js/main.min.js"></script>
     <script src="/js/checkers.min.js"></script>
@@ -13,6 +13,8 @@
 <body onload="initGame()">
     <div class="container">
         <div id="checkersTable"></div>
+        <div id="turnShower" data-color="0"> CURRENT TURN </div>
+        <div id="hint" class="button" data-state="false">I NEED A HINT!</div>
     </div>
 </body>
 </html>
