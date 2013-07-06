@@ -63,7 +63,7 @@ function handleCellClick(cell)
                 {
                     if(possibleMoveMovements[i].row == toPositionObject.row && possibleMoveMovements[i].column == toPositionObject.column)
                     {
-                        movePiece(positionObject, toPositionObject, changeTurn());
+                        movePiece(positionObject, [toPositionObject], []);
                         return;
                     }
                 }
@@ -77,7 +77,8 @@ function handleCellClick(cell)
                     var lastMovementPosition = possibleEatMovement.movementPositions[possibleEatMovement.movementPositions.length - 1];
                     if(lastMovementPosition.row == toPositionObject.row && lastMovementPosition.column == toPositionObject.column)
                     {
-                        eatPiece(positionObject, possibleEatMovement);
+                        movePiece(positionObject, possibleEatMovement.movementPositions, possibleEatMovement.removedPiecesPosition);
+                        //eatPiece(positionObject, possibleEatMovement);
                     }
                 }
             }
@@ -206,42 +207,21 @@ function initPieces()
     }
 }
 
-function eatPiece(from, possibleEatMovement)
-{
-    var currentPosition = from;
-    for(var i = 0; i < possibleEatMovement.movementPositions.length; i++)
-    {
-        if(i == possibleEatMovement.movementPositions.length - 1)
-        {
-            setTimeout(ANIMATION_SPEED + 10, movePiece(currentPosition, possibleEatMovement.movementPositions[i], changeTurn()));
-        }
-        else
-        {
-            setTimeout(ANIMATION_SPEED + 10, movePiece(currentPosition, possibleEatMovement.movementPositions[i]));
-        }
-
-        removePiece(possibleEatMovement.removedPiecesPosition[i]);
-        currentPosition = possibleEatMovement.movementPositions[i];
-    }
-}
-
 function removePiece(piecePosition)
 {
     $("div[data-row='"+piecePosition.row+"'] .checkers-cell[data-column='"+piecePosition.column+"']").html("");
     table[piecePosition.row][piecePosition.column] = EMPTY_CELL;
 }
 
-function movePiece(from, to, callback)
+function movePiece(from, movements, removedPieces)
 {
-    if(arguments.length == 2)
-    {
-        callback = function(){};
-    }
     var piece = $("div[data-row='"+from.row+"'] .checkers-cell[data-column='"+from.column+"']").find(".checkers-piece");
     if(piece)
     {
         var pieceHtml = $("div[data-row='"+from.row+"'] .checkers-cell[data-column='"+from.column+"']").html();
 
+        var to = arrayShift(movements);
+        var pieceToRemove = removedPieces.length > 0 ? arrayShift(removedPieces) : null;
         var toPosition = $("div[data-row='"+to.row+"'] .checkers-cell[data-column='"+to.column+"']").position();
 
         var actualLeft = piece.position().left + "px";
@@ -263,11 +243,31 @@ function movePiece(from, to, callback)
 
             table[to.row][to.column] = table[from.row][from.column];
             table[from.row][from.column] = EMPTY_CELL;
+
+            if(pieceToRemove != null)
+            {
+                removePiece(pieceToRemove);
+            }
+
             removePieceSelections();
             removeCellHighlights();
-            callback();
+            if(movements.length == 0)
+            {
+                changeTurn();
+            }
+            else
+            {
+                movePiece(to, movements, removedPieces);
+            }
         });
     }
+}
+
+function arrayShift(array)
+{
+    var indexToRemove = 0;
+    var numberToRemove = 1;
+    return array.splice(indexToRemove, numberToRemove)[0];
 }
 
 function changeTurn()
