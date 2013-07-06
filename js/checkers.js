@@ -5,6 +5,8 @@
 * */
 function getMoveActions(table, piecePosition)
 {
+    var changedTable =[];
+
     var possibleMoves = [];
     var pieceColor = table[piecePosition.row][piecePosition.column];
 
@@ -14,9 +16,13 @@ function getMoveActions(table, piecePosition)
     {
         try
         {
+            changedTable[i] = copyTable(table);
             var position = newPositions[i];
             if(table[position.row][position.column] == EMPTY_CELL)
             {
+                changedTable[i][position.row][position.column] = pieceColor;
+                changedTable[i][piecePosition.row][piecePosition.column] = EMPTY_CELL;
+                position.table = changedTable[i];
                 possibleMoves.push(position);
             }
         }
@@ -178,6 +184,11 @@ function getDiagonalMoves(player, piecePosition)
     return newPositions;
 }
 
+function gameIsFinished(table)
+{
+    return false;
+}
+
 function concatLists(list1, list2)
 {
     for(var i = 0; i< list2.length; i++)
@@ -213,4 +224,21 @@ function copyNodeList(nodeList)
     }
 
     return copiedNodeList;
+}
+
+function getPlayerPiecesPosition(table, player)
+{
+    var positions = [];
+    for(var i = 0; i < table.length; i++)
+    {
+        for(var j = 0; j < table[0].length; j++)
+        {
+            if(table[i][j] == player)
+            {
+                positions.push({row: i, column: j});
+            }
+        }
+    }
+
+    return positions;
 }

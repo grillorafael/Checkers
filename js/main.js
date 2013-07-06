@@ -78,7 +78,6 @@ function handleCellClick(cell)
                     if(lastMovementPosition.row == toPositionObject.row && lastMovementPosition.column == toPositionObject.column)
                     {
                         movePiece(positionObject, possibleEatMovement.movementPositions, possibleEatMovement.removedPiecesPosition);
-                        //eatPiece(positionObject, possibleEatMovement);
                     }
                 }
             }
