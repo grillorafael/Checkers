@@ -9,6 +9,7 @@ function initGame()
     initTable();
     initPieces();
     addEventListeners();
+    iaMove();
 }
 
 function addEventListeners()
@@ -55,7 +56,7 @@ function handleCellClick(cell)
             var toPositionObject = {row: cellRow, column: cellColumn};
 
             var possibleMoveMovements = getMoveActions(table, positionObject);
-            var possibleEatMovements = getEatActions(table, positionObject, [], []);
+            var possibleEatMovements = getEatActions(table, positionObject, [], [], positionObject);
 
             if(possibleMoveMovements.length > 0)
             {
@@ -113,7 +114,7 @@ function highlightMoves(piece)
     var positionObject = {row: selectedRow, column: selectedColumn};
 
     var possibleMoveMovements = getMoveActions(table, positionObject);
-    var possibleEatMovements = getEatActions(table, positionObject, [], []);
+    var possibleEatMovements = getEatActions(table, positionObject, [], [], positionObject);
 
     for(var i = 0; i < possibleMoveMovements.length; i++)
     {
@@ -274,6 +275,7 @@ function changeTurn()
     if(currentTurn)
     {
         currentTurn = TOP_PLAYER;
+        iaMove();
     }
     else
     {

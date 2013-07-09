@@ -5,8 +5,6 @@
 * */
 function getMoveActions(table, piecePosition)
 {
-    var changedTable =[];
-
     var possibleMoves = [];
     var pieceColor = table[piecePosition.row][piecePosition.column];
 
@@ -16,13 +14,13 @@ function getMoveActions(table, piecePosition)
     {
         try
         {
-            changedTable[i] = copyTable(table);
+            var tableAux = copyTable(table);
             var position = newPositions[i];
             if(table[position.row][position.column] == EMPTY_CELL)
             {
-                changedTable[i][position.row][position.column] = pieceColor;
-                changedTable[i][piecePosition.row][piecePosition.column] = EMPTY_CELL;
-                position.table = changedTable[i];
+                tableAux[position.row][position.column] = pieceColor;
+                tableAux[piecePosition.row][piecePosition.column] = EMPTY_CELL;
+                position.table = tableAux;
                 possibleMoves.push(position);
             }
         }
@@ -35,7 +33,7 @@ function getMoveActions(table, piecePosition)
     return possibleMoves;
 }
 
-function getEatActions(checkersTable, piecePosition, movementPositions, removedPiecesPositions)
+function getEatActions(checkersTable, piecePosition, movementPositions, removedPiecesPositions, initialPiecePosition)
 {
     var possibleMoves = [];
     var pieceColor = checkersTable[piecePosition.row][piecePosition.column];
@@ -69,9 +67,9 @@ function getEatActions(checkersTable, piecePosition, movementPositions, removedP
                 changedRemovedPiecePositions.push(newPositions[0]);
 
                 possibleMoves.push({type: EAT_PIECE, movementPositions:changedMovementPositions,
-                    removedPiecesPosition: changedRemovedPiecePositions, table: changedTable});
+                    removedPiecesPosition: changedRemovedPiecePositions, table: changedTable, fromRow:initialPiecePosition.row, fromColumn:initialPiecePosition.column});
                 concatLists(possibleMoves,
-                    getEatActions(changedTable, eatPosition, changedMovementPositions, changedRemovedPiecePositions));
+                    getEatActions(changedTable, eatPosition, changedMovementPositions, changedRemovedPiecePositions, initialPiecePosition));
             }
         }
     }catch(error){}
@@ -98,9 +96,9 @@ function getEatActions(checkersTable, piecePosition, movementPositions, removedP
                 changedRemovedPiecePositions.push(newPositions[1]);
 
                 possibleMoves.push({type: EAT_PIECE, movementPositions:changedMovementPositions,
-                    removedPiecesPosition: changedRemovedPiecePositions, table: changedTable});
+                    removedPiecesPosition: changedRemovedPiecePositions, table: changedTable, fromRow:initialPiecePosition.row, fromColumn:initialPiecePosition.column});
                 concatLists(possibleMoves,
-                    getEatActions(changedTable, eatPosition, changedMovementPositions, changedRemovedPiecePositions));
+                    getEatActions(changedTable, eatPosition, changedMovementPositions, changedRemovedPiecePositions, initialPiecePosition));
             }
         }
     }catch(error){}
@@ -127,9 +125,9 @@ function getEatActions(checkersTable, piecePosition, movementPositions, removedP
                 changedRemovedPiecePositions.push(newPositions[2]);
 
                 possibleMoves.push({type: EAT_PIECE, movementPositions:changedMovementPositions,
-                    removedPiecesPosition: changedRemovedPiecePositions, table: changedTable});
+                    removedPiecesPosition: changedRemovedPiecePositions, table: changedTable, fromRow:initialPiecePosition.row, fromColumn:initialPiecePosition.column});
                 concatLists(possibleMoves,
-                    getEatActions(changedTable, eatPosition, changedMovementPositions, changedRemovedPiecePositions));
+                    getEatActions(changedTable, eatPosition, changedMovementPositions, changedRemovedPiecePositions, initialPiecePosition));
             }
         }
     }catch(error){}
@@ -156,9 +154,9 @@ function getEatActions(checkersTable, piecePosition, movementPositions, removedP
                 changedRemovedPiecePositions.push(newPositions[3]);
 
                 possibleMoves.push({type: EAT_PIECE, movementPositions:changedMovementPositions,
-                    removedPiecesPosition: changedRemovedPiecePositions, table: changedTable});
+                    removedPiecesPosition: changedRemovedPiecePositions, table: changedTable, fromRow:initialPiecePosition.row, fromColumn:initialPiecePosition.column});
                 concatLists(possibleMoves,
-                    getEatActions(changedTable, eatPosition, changedMovementPositions, changedRemovedPiecePositions));
+                    getEatActions(changedTable, eatPosition, changedMovementPositions, changedRemovedPiecePositions, initialPiecePosition));
             }
         }
     }catch(error){}
@@ -172,21 +170,49 @@ function getDiagonalMoves(player, piecePosition)
     piecePosition.column = Number(piecePosition.column);
     if(player == TOP_PLAYER)
     {
-        var newPositions = [{type: MOVE_PIECE, row: piecePosition.row + 1, column: piecePosition.column + 1},
-            {type: MOVE_PIECE, row: piecePosition.row + 1, column: piecePosition.column -1}];
+        var newPositions = [{type: MOVE_PIECE, row: piecePosition.row + 1, column: piecePosition.column + 1, fromRow: piecePosition.row, fromColumn:piecePosition.column},
+            {type: MOVE_PIECE, row: piecePosition.row + 1, column: piecePosition.column -1, fromRow: piecePosition.row, fromColumn:piecePosition.column}];
     }
     else
     {
-        var newPositions = [{type: MOVE_PIECE, row: piecePosition.row - 1, column: piecePosition.column + 1},
-            {type: MOVE_PIECE, row: piecePosition.row - 1, column: piecePosition.column -1}];
+        var newPositions = [{type: MOVE_PIECE, row: piecePosition.row - 1, column: piecePosition.column + 1, fromRow: piecePosition.row, fromColumn:piecePosition.column},
+            {type: MOVE_PIECE, row: piecePosition.row - 1, column: piecePosition.column -1, fromRow: piecePosition.row, fromColumn:piecePosition.column}];
     }
 
     return newPositions;
 }
 
-function gameIsFinished(table)
+function hasWinner(table)
 {
-    return false;
+    var hasTop = false;
+    var hasBottom = false;
+    for(var i = 0; i < table.length && (!hasTop || !hasBottom); i++)
+    {
+        for(var j = 0; (j < table[0].length) && (!hasTop || !hasBottom); j++)
+        {
+            if(table[i][j] == TOP_PLAYER)
+            {
+                hasTop = true
+            }
+            else if(table[i][j] == BOTTOM_PLAYER)
+            {
+                hasBottom = true;
+            }
+        }
+    }
+
+    if(hasTop && !hasBottom)
+    {
+        return TOP_PLAYER;
+    }
+    else if(!hasTop && hasBottom)
+    {
+        return BOTTOM_PLAYER
+    }
+    else
+    {
+        return null;
+    }
 }
 
 function concatLists(list1, list2)
@@ -241,4 +267,38 @@ function getPlayerPiecesPosition(table, player)
     }
 
     return positions;
+}
+
+function getPossibleMovements(table, player)
+{
+    var positions = getPlayerPiecesPosition(table, player);
+
+    var possibleMovementsTotal = [];
+    for(var k = 0; k < positions.length; k++)
+    {
+        var positionObject = positions[k];
+
+        var possibleMoveMovements = getMoveActions(table, positionObject);
+        var possibleMovements = getEatActions(table, positionObject, [], [], positionObject);
+
+        concatLists(possibleMovements, possibleMoveMovements);
+        concatLists(possibleMovementsTotal, possibleMovements);
+    }
+
+    return possibleMovementsTotal;
+}
+
+function iaMove()
+{
+    var movement = minimaxDecision(table);
+    console.log(movement);
+    console.log(table);
+    if(movement.type == MOVE_PIECE)
+    {
+        movePiece({row:movement.fromRow, column: movement.fromColumn}, [{row:movement.row, column: movement.column}], []);
+    }
+    else
+    {
+        movePiece({row:movement.fromRow, column: movement.fromColumn}, movement.movementPositions, movement.removedPiecesPosition);
+    }
 }

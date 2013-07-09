@@ -5,12 +5,13 @@
     <ignored path="Checkers.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373119504495" ignored="false" />
-    <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373119246741" ignored="false" />
+    <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373384264484" ignored="false" />
     <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373081940233" ignored="false" />
-    <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373120548479" ignored="false" />
-    <file path="/constants.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1372948451621" ignored="false" />
+    <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373384037406" ignored="false" />
+    <file path="/constants.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373380875183" ignored="false" />
     <file path="$PROJECT_DIR$/css/style.min.css" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373027055966" ignored="false" />
-    <file path="/minimax.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373120646344" ignored="false" />
+    <file path="/minimax.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373382898292" ignored="false" />
+    <file path="/a.dummy" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373384098973" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +70,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="113" selection-start="5036" selection-end="5036" vertical-scroll-proportion="3.3264463">
+            <state line="277" column="17" selection-start="8565" selection-end="8565" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,47 +82,39 @@
       <file leaf-file-name="checkers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/checkers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="47" selection-start="8758" selection-end="8796" vertical-scroll-proportion="0.0">
+            <state line="303" column="52" selection-start="11317" selection-end="11317" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#385#913#0" expanded="false" />
-                <element signature="e#407#865#0" expanded="false" />
-                <element signature="e#580#855#0" expanded="false" />
-                <element signature="e#895#907#0" expanded="false" />
-                <element signature="n#!!block;n#getEatActions#0" expanded="false" />
-                <element signature="e#1171#1537#0" expanded="false" />
-                <element signature="e#1547#2957#0" expanded="false" />
-                <element signature="e#1718#2951#0" expanded="false" />
-                <element signature="e#1750#1862#0" expanded="false" />
-                <element signature="e#1958#2941#0" expanded="false" />
-                <element signature="e#2608#2763#0" expanded="false" />
-                <element signature="e#2980#4390#0" expanded="false" />
-                <element signature="e#3151#4384#0" expanded="false" />
-                <element signature="e#3183#3295#0" expanded="false" />
-                <element signature="e#3391#4374#0" expanded="false" />
-                <element signature="e#4041#4196#0" expanded="false" />
-                <element signature="e#4413#5823#0" expanded="false" />
-                <element signature="e#4584#5817#0" expanded="false" />
-                <element signature="e#4616#4728#0" expanded="false" />
-                <element signature="e#4824#5807#0" expanded="false" />
-                <element signature="e#5474#5629#0" expanded="false" />
-                <element signature="e#5846#7256#0" expanded="false" />
-                <element signature="e#6017#7250#0" expanded="false" />
-                <element signature="e#6049#6161#0" expanded="false" />
-                <element signature="e#6257#7240#0" expanded="false" />
-                <element signature="e#6907#7062#0" expanded="false" />
+                <element signature="n#!!block;n#getMoveActions#0" expanded="false" />
+                <element signature="e#844#856#0" expanded="false" />
+                <element signature="e#1142#1508#0" expanded="false" />
+                <element signature="e#1721#1833#0" expanded="false" />
+                <element signature="e#3047#4553#0" expanded="false" />
+                <element signature="e#3250#3362#0" expanded="false" />
+                <element signature="e#4576#6082#0" expanded="false" />
+                <element signature="e#4779#4891#0" expanded="false" />
+                <element signature="e#6105#7611#0" expanded="false" />
+                <element signature="e#6308#6420#0" expanded="false" />
                 <element signature="n#!!block;n#getDiagonalMoves#0" expanded="false" />
-                <element signature="e#7493#7704#0" expanded="false" />
-                <element signature="e#7522#7697#0" expanded="false" />
-                <element signature="e#7718#7929#0" expanded="false" />
-                <element signature="e#7747#7922#0" expanded="false" />
+                <element signature="n#!!block;n#hasWinner#0" expanded="false" />
+                <element signature="e#8710#9027#0" expanded="false" />
+                <element signature="e#8798#9021#0" expanded="false" />
+                <element signature="e#8854#8899#0" expanded="false" />
+                <element signature="e#8962#9011#0" expanded="false" />
+                <element signature="e#9062#9096#0" expanded="false" />
+                <element signature="e#9135#9171#0" expanded="false" />
+                <element signature="e#9185#9213#0" expanded="false" />
                 <element signature="n#!!block;n#concatLists#0" expanded="false" />
-                <element signature="e#8095#8132#0" expanded="false" />
+                <element signature="e#9299#9336#0" expanded="false" />
                 <element signature="n#!!block;n#copyTable#0" expanded="false" />
-                <element signature="e#8249#8456#0" expanded="false" />
-                <element signature="e#8347#8409#0" expanded="false" />
+                <element signature="e#9453#9660#0" expanded="false" />
+                <element signature="e#9551#9613#0" expanded="false" />
                 <element signature="n#!!block;n#copyNodeList#0" expanded="false" />
-                <element signature="e#8596#8717#0" expanded="false" />
-                <element signature="e#8626#8710#0" expanded="false" />
+                <element signature="e#9800#9921#0" expanded="false" />
+                <element signature="e#9830#9914#0" expanded="false" />
+                <element signature="n#!!block;n#getPlayerPiecesPosition#0" expanded="false" />
+                <element signature="e#10073#10268#0" expanded="false" />
+                <element signature="e#10132#10262#0" expanded="false" />
+                <element signature="e#10184#10252#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -130,16 +123,16 @@
       <file leaf-file-name="minimax.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/minimax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="40" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0">
+            <state line="82" column="12" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="constants.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="constants.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
+            <state line="5" column="21" selection-start="127" selection-end="127" vertical-scroll-proportion="0.14705883">
               <folding />
             </state>
           </provider>
@@ -157,7 +150,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="35" selection-start="517" selection-end="517" vertical-scroll-proportion="-6.875">
+            <state line="8" column="25" selection-start="370" selection-end="370" vertical-scroll-proportion="-5.0">
               <folding />
             </state>
           </provider>
@@ -174,20 +167,19 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/css/reset.css" />
-        <option value="$PROJECT_DIR$/js/constants.js" />
         <option value="$PROJECT_DIR$/less/style.less" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/checkers.js" />
-        <option value="$PROJECT_DIR$/js/minimax.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/minimax.js" />
+        <option value="$PROJECT_DIR$/js/constants.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="874" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -266,7 +258,7 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -384,12 +376,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -403,11 +396,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20444763" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20444763" sideWeight="0.6708229" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -539,75 +531,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="35" selection-start="517" selection-end="517" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/minimax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="40" selection-start="1544" selection-end="1544" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
+        <state line="8" column="25" selection-start="370" selection-end="370" vertical-scroll-proportion="-5.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/checkers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="47" selection-start="8758" selection-end="8796" vertical-scroll-proportion="0.0">
+        <state line="303" column="52" selection-start="11317" selection-end="11317" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#385#913#0" expanded="false" />
-            <element signature="e#407#865#0" expanded="false" />
-            <element signature="e#580#855#0" expanded="false" />
-            <element signature="e#895#907#0" expanded="false" />
-            <element signature="n#!!block;n#getEatActions#0" expanded="false" />
-            <element signature="e#1171#1537#0" expanded="false" />
-            <element signature="e#1547#2957#0" expanded="false" />
-            <element signature="e#1718#2951#0" expanded="false" />
-            <element signature="e#1750#1862#0" expanded="false" />
-            <element signature="e#1958#2941#0" expanded="false" />
-            <element signature="e#2608#2763#0" expanded="false" />
-            <element signature="e#2980#4390#0" expanded="false" />
-            <element signature="e#3151#4384#0" expanded="false" />
-            <element signature="e#3183#3295#0" expanded="false" />
-            <element signature="e#3391#4374#0" expanded="false" />
-            <element signature="e#4041#4196#0" expanded="false" />
-            <element signature="e#4413#5823#0" expanded="false" />
-            <element signature="e#4584#5817#0" expanded="false" />
-            <element signature="e#4616#4728#0" expanded="false" />
-            <element signature="e#4824#5807#0" expanded="false" />
-            <element signature="e#5474#5629#0" expanded="false" />
-            <element signature="e#5846#7256#0" expanded="false" />
-            <element signature="e#6017#7250#0" expanded="false" />
-            <element signature="e#6049#6161#0" expanded="false" />
-            <element signature="e#6257#7240#0" expanded="false" />
-            <element signature="e#6907#7062#0" expanded="false" />
+            <element signature="n#!!block;n#getMoveActions#0" expanded="false" />
+            <element signature="e#844#856#0" expanded="false" />
+            <element signature="e#1142#1508#0" expanded="false" />
+            <element signature="e#1721#1833#0" expanded="false" />
+            <element signature="e#3047#4553#0" expanded="false" />
+            <element signature="e#3250#3362#0" expanded="false" />
+            <element signature="e#4576#6082#0" expanded="false" />
+            <element signature="e#4779#4891#0" expanded="false" />
+            <element signature="e#6105#7611#0" expanded="false" />
+            <element signature="e#6308#6420#0" expanded="false" />
             <element signature="n#!!block;n#getDiagonalMoves#0" expanded="false" />
-            <element signature="e#7493#7704#0" expanded="false" />
-            <element signature="e#7522#7697#0" expanded="false" />
-            <element signature="e#7718#7929#0" expanded="false" />
-            <element signature="e#7747#7922#0" expanded="false" />
+            <element signature="n#!!block;n#hasWinner#0" expanded="false" />
+            <element signature="e#8710#9027#0" expanded="false" />
+            <element signature="e#8798#9021#0" expanded="false" />
+            <element signature="e#8854#8899#0" expanded="false" />
+            <element signature="e#8962#9011#0" expanded="false" />
+            <element signature="e#9062#9096#0" expanded="false" />
+            <element signature="e#9135#9171#0" expanded="false" />
+            <element signature="e#9185#9213#0" expanded="false" />
             <element signature="n#!!block;n#concatLists#0" expanded="false" />
-            <element signature="e#8095#8132#0" expanded="false" />
+            <element signature="e#9299#9336#0" expanded="false" />
             <element signature="n#!!block;n#copyTable#0" expanded="false" />
-            <element signature="e#8249#8456#0" expanded="false" />
-            <element signature="e#8347#8409#0" expanded="false" />
+            <element signature="e#9453#9660#0" expanded="false" />
+            <element signature="e#9551#9613#0" expanded="false" />
             <element signature="n#!!block;n#copyNodeList#0" expanded="false" />
-            <element signature="e#8596#8717#0" expanded="false" />
-            <element signature="e#8626#8710#0" expanded="false" />
+            <element signature="e#9800#9921#0" expanded="false" />
+            <element signature="e#9830#9914#0" expanded="false" />
+            <element signature="n#!!block;n#getPlayerPiecesPosition#0" expanded="false" />
+            <element signature="e#10073#10268#0" expanded="false" />
+            <element signature="e#10132#10262#0" expanded="false" />
+            <element signature="e#10184#10252#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="113" selection-start="5036" selection-end="5036" vertical-scroll-proportion="3.3264463">
+        <state line="277" column="17" selection-start="8565" selection-end="8565" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/minimax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="12" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="21" selection-start="127" selection-end="127" vertical-scroll-proportion="0.14705883">
           <folding />
         </state>
       </provider>

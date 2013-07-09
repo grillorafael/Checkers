@@ -1,60 +1,44 @@
-function maxValue(table)
+function maxValue(table, iteration)
 {
-    if(gameIsFinished(table))
+    iteration++;
+    var winnerPlayer = hasWinner(table);
+    if(winnerPlayer != null)
     {
-        return utility(table, TOP_PLAYER);
+        return winnerPlayer == IA_PLAYER ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY;
     }
-    var v = Number.NEGATIVE_INFINITY;
-
-    var positions = getPlayerPiecesPosition(table, TOP_PLAYER);
-
-    for(var k = 0; k < positions.length; k++)
+    else if(iteration > MAX_ITERATION)
     {
-        var positionObject = positions[k];
+        return utility(table, IA_PLAYER);
+    }
 
-        var possibleMoveMovements = getMoveActions(table, positionObject);
-        var possibleEatMovements = getEatActions(table, positionObject, [], []);
-
-        if(possibleMoveMovements.length > 0)
-        {
-            for(var i = 0; i < possibleMoveMovements.length; i++)
-            {
-                v = Math.max(v, utility(possibleMoveMovements[i].table, TOP_PLAYER));
-            }
-        }
-
-        //TODO PERCORRER O EAT MOVEMENTS
+    var v = Number.NEGATIVE_INFINITY;
+    var possibleMovements = getPossibleMovements(table, IA_PLAYER);
+    for(var i = 0; i < possibleMovements.length; i++)
+    {
+        v = Math.max(v, minValue(possibleMovements[i].table, iteration));
     }
 
     return v;
 }
 
-function minValue(table)
+function minValue(table, iteration)
 {
-    if(gameIsFinished(table))
+    iteration++;
+    var winnerPlayer = hasWinner(table);
+    if(winnerPlayer != null)
     {
-        return utility(table, BOTTOM_PLAYER);
+        return winnerPlayer == IA_PLAYER ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY;
     }
-    var v = Number.POSITIVE_INFINITY;
-
-    var positions = getPlayerPiecesPosition(table, BOTTOM_PLAYER);
-
-    for(var k = 0; k < positions.length; k++)
+    else if(iteration > MAX_ITERATION)
     {
-        var positionObject = positions[k];
+        return utility(table, HUMAN_PLAYER);
+    }
 
-        var possibleMoveMovements = getMoveActions(table, positionObject);
-        var possibleEatMovements = getEatActions(table, positionObject, [], []);
-
-        if(possibleMoveMovements.length > 0)
-        {
-            for(var i = 0; i < possibleMoveMovements.length; i++)
-            {
-                v = Math.min(v, utility(possibleMoveMovements[i].table, BOTTOM_PLAYER));
-            }
-        }
-
-        //TODO PERCORRER O EAT MOVEMENTS
+    var v = Number.POSITIVE_INFINITY;
+    var possibleMovements = getPossibleMovements(table, HUMAN_PLAYER);
+    for(var i = 0; i < possibleMovements.length; i++)
+    {
+        v = Math.min(v, maxValue(possibleMovements[i].table, iteration));
     }
 
     return v;
@@ -62,22 +46,39 @@ function minValue(table)
 
 function minimaxDecision(table)
 {
+    var possibleMovements = getPossibleMovements(table, IA_PLAYER);
+    var bestMovementValue = Number.NEGATIVE_INFINITY;
+    var bestMovementIndex = null;
+    for(var i = 0; i < possibleMovements.length; i++)
+    {
+        var currentMovementValue = minValue(possibleMovements[i].table, 0);
+        if(currentMovementValue > bestMovementValue)
+        {
+            bestMovementValue = currentMovementValue;
+            bestMovementIndex = i;
+        }
+    }
 
+    return possibleMovements[bestMovementIndex];
 }
 
-//This function returns the amount of pieces the enemy has
 function utility(table, player)
 {
-    var count = 0;
+    var enemyPieces = 0;
+    var playerPieces = 0;
     for(var i = 0; i < table.length; i++)
     {
         for(var j = 0; j < table[0].length; j++)
         {
             if(table[i][j] != EMPTY_CELL && table[i][j] != player)
             {
-                count++;
+                enemyPieces++;
+            }
+            else if(table[i][j] == player)
+            {
+                playerPieces++;
             }
         }
     }
-    return count;
+    return -enemyPieces;
 }
