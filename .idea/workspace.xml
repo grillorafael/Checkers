@@ -4,14 +4,17 @@
     <list default="true" id="74d6ffc1-5821-44d4-8e79-f4234186dc67" name="Default" comment="" />
     <ignored path="Checkers.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373119504495" ignored="false" />
-    <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373384264484" ignored="false" />
-    <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373081940233" ignored="false" />
-    <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373384037406" ignored="false" />
-    <file path="/constants.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373380875183" ignored="false" />
+    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374161860539" ignored="false" />
+    <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374161867250" ignored="false" />
+    <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373985452263" ignored="false" />
+    <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374160875264" ignored="false" />
+    <file path="/constants.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374155689365" ignored="false" />
     <file path="$PROJECT_DIR$/css/style.min.css" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373027055966" ignored="false" />
-    <file path="/minimax.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373382898292" ignored="false" />
+    <file path="/minimax.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373989994046" ignored="false" />
     <file path="/a.dummy" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1373384098973" ignored="false" />
+    <file path="$PROJECT_DIR$/js/main.min.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374161925524" ignored="false" />
+    <file path="$PROJECT_DIR$/js/checkers.min.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374161486547" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../Specta/MetaCerta-Tenda/res/layout/activity_desktop.xml" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374156299028" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +29,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -60,7 +64,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -73,8 +76,61 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="277" column="17" selection-start="8565" selection-end="8565" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="20" column="36" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!block;n#addEventListeners#0" expanded="false" />
+                <element signature="n#!!block;n#handleHintClick#0" expanded="false" />
+                <element signature="e#566#648#0" expanded="false" />
+                <element signature="e#662#879#0" expanded="false" />
+                <element signature="e#768#822#0" expanded="false" />
+                <element signature="n#!!block;n#handleCellClick#0" expanded="false" />
+                <element signature="e#1045#3012#0" expanded="false" />
+                <element signature="e#1152#3006#0" expanded="false" />
+                <element signature="e#1888#2299#0" expanded="false" />
+                <element signature="e#1976#2285#0" expanded="false" />
+                <element signature="e#2137#2267#0" expanded="false" />
+                <element signature="e#2361#2996#0" expanded="false" />
+                <element signature="e#2448#2982#0" expanded="false" />
+                <element signature="e#2808#2964#0" expanded="false" />
+                <element signature="n#!!block;n#handlePieceClick#0" expanded="false" />
+                <element signature="e#3247#3342#0" expanded="false" />
+                <element signature="e#3279#3336#0" expanded="false" />
+                <element signature="e#3402#3443#0" expanded="false" />
+                <element signature="n#!!block;n#highlightMoves#0" expanded="false" />
+                <element signature="e#3953#4012#0" expanded="false" />
+                <element signature="e#4075#4260#0" expanded="false" />
+                <element signature="e#4167#4254#0" expanded="false" />
+                <element signature="n#!!block;n#addCellHighlight#0" expanded="false" />
+                <element signature="n#!!block;n#removeCellHighlights#0" expanded="false" />
+                <element signature="e#4498#4547#0" expanded="false" />
+                <element signature="n#!!block;n#removePieceSelections#0" expanded="false" />
+                <element signature="e#4633#4681#0" expanded="false" />
+                <element signature="n#!!block;n#initTable#0" expanded="false" />
+                <element signature="e#4817#5268#0" expanded="false" />
+                <element signature="e#4968#5155#0" expanded="false" />
+                <element signature="n#!!block;n#initTableStructure#0" expanded="false" />
+                <element signature="e#5396#5533#0" expanded="false" />
+                <element signature="e#5464#5501#0" expanded="false" />
+                <element signature="n#!!block;n#initPieces#0" expanded="false" />
+                <element signature="e#5728#5966#0" expanded="false" />
+                <element signature="e#5784#5960#0" expanded="false" />
+                <element signature="e#6023#6267#0" expanded="false" />
+                <element signature="e#6079#6261#0" expanded="false" />
+                <element signature="n#!!block;n#removePiece#0" expanded="false" />
+                <element signature="n#!!block;n#movePiece#0" expanded="false" />
+                <element signature="e#6681#8548#0" expanded="false" />
+                <element signature="e#7165#7272#0" expanded="false" />
+                <element signature="e#7298#7397#0" expanded="false" />
+                <element signature="e#7426#8540#0" expanded="false" />
+                <element signature="e#7994#8053#0" expanded="false" />
+                <element signature="e#8178#8428#0" expanded="false" />
+                <element signature="e#8248#8384#0" expanded="false" />
+                <element signature="e#8458#8530#0" expanded="false" />
+                <element signature="n#!!block;n#arrayShift#0" expanded="false" />
+                <element signature="n#!!block;n#changeTurn#0" expanded="false" />
+                <element signature="e#8746#8819#0" expanded="false" />
+                <element signature="e#8833#8877#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,39 +138,81 @@
       <file leaf-file-name="checkers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/checkers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="52" selection-start="11317" selection-end="11317" vertical-scroll-proportion="0.0">
+            <state line="191" column="0" selection-start="7846" selection-end="7846" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!block;n#getMoveActions#0" expanded="false" />
-                <element signature="e#844#856#0" expanded="false" />
-                <element signature="e#1142#1508#0" expanded="false" />
-                <element signature="e#1721#1833#0" expanded="false" />
-                <element signature="e#3047#4553#0" expanded="false" />
-                <element signature="e#3250#3362#0" expanded="false" />
-                <element signature="e#4576#6082#0" expanded="false" />
-                <element signature="e#4779#4891#0" expanded="false" />
-                <element signature="e#6105#7611#0" expanded="false" />
-                <element signature="e#6308#6420#0" expanded="false" />
+                <element signature="e#175#244#0" expanded="false" />
+                <element signature="e#258#329#0" expanded="false" />
+                <element signature="n#!!block;n#pieceIsLady#0" expanded="false" />
+                <element signature="n#!!block;n#isLadyPosition#0" expanded="false" />
+                <element signature="n#!!block;n#getLadyPieceMoveActions#0" expanded="false" />
+                <element signature="e#856#1520#0" expanded="false" />
+                <element signature="e#1577#2336#0" expanded="false" />
+                <element signature="e#1643#2307#0" expanded="false" />
+                <element signature="e#1733#2297#0" expanded="false" />
+                <element signature="e#2013#2213#0" expanded="false" />
+                <element signature="n#!!block;n#getNormalPieceMoveActions#0" expanded="false" />
+                <element signature="e#2648#3273#0" expanded="false" />
+                <element signature="e#2670#3225#0" expanded="false" />
+                <element signature="e#2840#3215#0" expanded="false" />
+                <element signature="e#3255#3267#0" expanded="false" />
+                <element signature="n#!!block;n#getEatActions#0" expanded="false" />
+                <element signature="e#3463#3599#0" expanded="false" />
+                <element signature="e#3613#3751#0" expanded="false" />
+                <element signature="n#!!block;n#getLadyEatActions#0" expanded="false" />
+                <element signature="e#4041#4303#0" expanded="false" />
+                <element signature="n#!!block;n#getLadyEatActionsRecursive#0" expanded="false" />
+                <element signature="e#4674#4861#0" expanded="false" />
+                <element signature="e#4875#5357#0" expanded="false" />
+                <element signature="e#4904#5350#0" expanded="false" />
+                <element signature="e#5412#7692#0" expanded="false" />
+                <element signature="e#5425#7672#0" expanded="false" />
+                <element signature="e#5842#7662#0" expanded="false" />
+                <element signature="e#5878#5994#0" expanded="false" />
+                <element signature="e#6047#6140#0" expanded="false" />
+                <element signature="e#6178#6273#0" expanded="false" />
+                <element signature="e#6376#7648#0" expanded="false" />
+                <element signature="e#7059#7316#0" expanded="false" />
+                <element signature="n#!!block;n#getNormalEatActions#0" expanded="false" />
+                <element signature="e#7977#8403#0" expanded="false" />
+                <element signature="e#8459#10673#0" expanded="false" />
+                <element signature="e#8472#10653#0" expanded="false" />
+                <element signature="e#8889#10643#0" expanded="false" />
+                <element signature="e#8925#9041#0" expanded="false" />
+                <element signature="e#9217#10629#0" expanded="false" />
+                <element signature="e#9900#10157#0" expanded="false" />
+                <element signature="e#10243#10362#0" expanded="false" />
                 <element signature="n#!!block;n#getDiagonalMoves#0" expanded="false" />
+                <element signature="e#10895#11228#0" expanded="false" />
+                <element signature="e#10924#11221#0" expanded="false" />
+                <element signature="e#11242#11575#0" expanded="false" />
+                <element signature="e#11271#11568#0" expanded="false" />
                 <element signature="n#!!block;n#hasWinner#0" expanded="false" />
-                <element signature="e#8710#9027#0" expanded="false" />
-                <element signature="e#8798#9021#0" expanded="false" />
-                <element signature="e#8854#8899#0" expanded="false" />
-                <element signature="e#8962#9011#0" expanded="false" />
-                <element signature="e#9062#9096#0" expanded="false" />
-                <element signature="e#9135#9171#0" expanded="false" />
-                <element signature="e#9185#9213#0" expanded="false" />
+                <element signature="e#11757#12074#0" expanded="false" />
+                <element signature="e#11845#12068#0" expanded="false" />
+                <element signature="e#11901#11946#0" expanded="false" />
+                <element signature="e#12009#12058#0" expanded="false" />
+                <element signature="e#12109#12143#0" expanded="false" />
+                <element signature="e#12182#12218#0" expanded="false" />
+                <element signature="e#12232#12260#0" expanded="false" />
                 <element signature="n#!!block;n#concatLists#0" expanded="false" />
-                <element signature="e#9299#9336#0" expanded="false" />
+                <element signature="e#12346#12383#0" expanded="false" />
                 <element signature="n#!!block;n#copyTable#0" expanded="false" />
-                <element signature="e#9453#9660#0" expanded="false" />
-                <element signature="e#9551#9613#0" expanded="false" />
+                <element signature="e#12500#12707#0" expanded="false" />
+                <element signature="e#12598#12660#0" expanded="false" />
                 <element signature="n#!!block;n#copyNodeList#0" expanded="false" />
-                <element signature="e#9800#9921#0" expanded="false" />
-                <element signature="e#9830#9914#0" expanded="false" />
+                <element signature="e#12847#12968#0" expanded="false" />
+                <element signature="e#12877#12961#0" expanded="false" />
                 <element signature="n#!!block;n#getPlayerPiecesPosition#0" expanded="false" />
-                <element signature="e#10073#10268#0" expanded="false" />
-                <element signature="e#10132#10262#0" expanded="false" />
-                <element signature="e#10184#10252#0" expanded="false" />
+                <element signature="e#13120#13315#0" expanded="false" />
+                <element signature="e#13179#13309#0" expanded="false" />
+                <element signature="e#13231#13299#0" expanded="false" />
+                <element signature="n#!!block;n#getPossibleMovements#0" expanded="false" />
+                <element signature="e#13537#13885#0" expanded="false" />
+                <element signature="n#!!block;n#iaMove#0" expanded="false" />
+                <element signature="e#14028#14158#0" expanded="false" />
+                <element signature="e#14172#14311#0" expanded="false" />
+                <element signature="n#!!block;n#addCoordinates#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -123,7 +221,7 @@
       <file leaf-file-name="minimax.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/minimax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="12" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.0">
+            <state line="107" column="4" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,7 +230,7 @@
       <file leaf-file-name="constants.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="21" selection-start="127" selection-end="127" vertical-scroll-proportion="0.14705883">
+            <state line="13" column="74" selection-start="286" selection-end="286" vertical-scroll-proportion="0.251938">
               <folding />
             </state>
           </provider>
@@ -141,7 +239,7 @@
       <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="22" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
+            <state line="94" column="1" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -150,7 +248,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="25" selection-start="370" selection-end="370" vertical-scroll-proportion="-5.0">
+            <state line="20" column="55" selection-start="800" selection-end="800" vertical-scroll-proportion="-12.5">
               <folding />
             </state>
           </provider>
@@ -168,10 +266,10 @@
       <list>
         <option value="$PROJECT_DIR$/css/reset.css" />
         <option value="$PROJECT_DIR$/less/style.less" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/checkers.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/minimax.js" />
+        <option value="$PROJECT_DIR$/js/checkers.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/constants.js" />
       </list>
     </option>
@@ -197,7 +295,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -208,44 +306,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Checkers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
@@ -260,8 +321,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -281,19 +342,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -322,6 +370,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -376,13 +437,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -396,10 +456,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20444763" sideWeight="0.6708229" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20444763" sideWeight="0.6708229" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32917705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -457,7 +518,9 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
@@ -470,7 +533,60 @@
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="20" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#!!block;n#addEventListeners#0" expanded="false" />
+            <element signature="n#!!block;n#handleHintClick#0" expanded="false" />
+            <element signature="e#566#648#0" expanded="false" />
+            <element signature="e#662#879#0" expanded="false" />
+            <element signature="e#768#822#0" expanded="false" />
+            <element signature="n#!!block;n#handleCellClick#0" expanded="false" />
+            <element signature="e#1045#3012#0" expanded="false" />
+            <element signature="e#1152#3006#0" expanded="false" />
+            <element signature="e#1888#2299#0" expanded="false" />
+            <element signature="e#1976#2285#0" expanded="false" />
+            <element signature="e#2137#2267#0" expanded="false" />
+            <element signature="e#2361#2996#0" expanded="false" />
+            <element signature="e#2448#2982#0" expanded="false" />
+            <element signature="e#2808#2964#0" expanded="false" />
+            <element signature="n#!!block;n#handlePieceClick#0" expanded="false" />
+            <element signature="e#3247#3342#0" expanded="false" />
+            <element signature="e#3279#3336#0" expanded="false" />
+            <element signature="e#3402#3443#0" expanded="false" />
+            <element signature="n#!!block;n#highlightMoves#0" expanded="false" />
+            <element signature="e#3953#4012#0" expanded="false" />
+            <element signature="e#4075#4260#0" expanded="false" />
+            <element signature="e#4167#4254#0" expanded="false" />
+            <element signature="n#!!block;n#addCellHighlight#0" expanded="false" />
+            <element signature="n#!!block;n#removeCellHighlights#0" expanded="false" />
+            <element signature="e#4498#4547#0" expanded="false" />
+            <element signature="n#!!block;n#removePieceSelections#0" expanded="false" />
+            <element signature="e#4633#4681#0" expanded="false" />
+            <element signature="n#!!block;n#initTable#0" expanded="false" />
+            <element signature="e#4817#5268#0" expanded="false" />
+            <element signature="e#4968#5155#0" expanded="false" />
+            <element signature="n#!!block;n#initTableStructure#0" expanded="false" />
+            <element signature="e#5396#5533#0" expanded="false" />
+            <element signature="e#5464#5501#0" expanded="false" />
+            <element signature="n#!!block;n#initPieces#0" expanded="false" />
+            <element signature="e#5728#5966#0" expanded="false" />
+            <element signature="e#5784#5960#0" expanded="false" />
+            <element signature="e#6023#6267#0" expanded="false" />
+            <element signature="e#6079#6261#0" expanded="false" />
+            <element signature="n#!!block;n#removePiece#0" expanded="false" />
+            <element signature="n#!!block;n#movePiece#0" expanded="false" />
+            <element signature="e#6681#8548#0" expanded="false" />
+            <element signature="e#7165#7272#0" expanded="false" />
+            <element signature="e#7298#7397#0" expanded="false" />
+            <element signature="e#7426#8540#0" expanded="false" />
+            <element signature="e#7994#8053#0" expanded="false" />
+            <element signature="e#8178#8428#0" expanded="false" />
+            <element signature="e#8248#8384#0" expanded="false" />
+            <element signature="e#8458#8530#0" expanded="false" />
+            <element signature="n#!!block;n#arrayShift#0" expanded="false" />
+            <element signature="n#!!block;n#changeTurn#0" expanded="false" />
+            <element signature="e#8746#8819#0" expanded="false" />
+            <element signature="e#8833#8877#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -484,7 +600,60 @@
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="27" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="n#!!block;n#addEventListeners#0" expanded="false" />
+            <element signature="n#!!block;n#handleHintClick#0" expanded="false" />
+            <element signature="e#566#648#0" expanded="false" />
+            <element signature="e#662#879#0" expanded="false" />
+            <element signature="e#768#822#0" expanded="false" />
+            <element signature="n#!!block;n#handleCellClick#0" expanded="false" />
+            <element signature="e#1045#3012#0" expanded="false" />
+            <element signature="e#1152#3006#0" expanded="false" />
+            <element signature="e#1888#2299#0" expanded="false" />
+            <element signature="e#1976#2285#0" expanded="false" />
+            <element signature="e#2137#2267#0" expanded="false" />
+            <element signature="e#2361#2996#0" expanded="false" />
+            <element signature="e#2448#2982#0" expanded="false" />
+            <element signature="e#2808#2964#0" expanded="false" />
+            <element signature="n#!!block;n#handlePieceClick#0" expanded="false" />
+            <element signature="e#3247#3342#0" expanded="false" />
+            <element signature="e#3279#3336#0" expanded="false" />
+            <element signature="e#3402#3443#0" expanded="false" />
+            <element signature="n#!!block;n#highlightMoves#0" expanded="false" />
+            <element signature="e#3953#4012#0" expanded="false" />
+            <element signature="e#4075#4260#0" expanded="false" />
+            <element signature="e#4167#4254#0" expanded="false" />
+            <element signature="n#!!block;n#addCellHighlight#0" expanded="false" />
+            <element signature="n#!!block;n#removeCellHighlights#0" expanded="false" />
+            <element signature="e#4498#4547#0" expanded="false" />
+            <element signature="n#!!block;n#removePieceSelections#0" expanded="false" />
+            <element signature="e#4633#4681#0" expanded="false" />
+            <element signature="n#!!block;n#initTable#0" expanded="false" />
+            <element signature="e#4817#5268#0" expanded="false" />
+            <element signature="e#4968#5155#0" expanded="false" />
+            <element signature="n#!!block;n#initTableStructure#0" expanded="false" />
+            <element signature="e#5396#5533#0" expanded="false" />
+            <element signature="e#5464#5501#0" expanded="false" />
+            <element signature="n#!!block;n#initPieces#0" expanded="false" />
+            <element signature="e#5728#5966#0" expanded="false" />
+            <element signature="e#5784#5960#0" expanded="false" />
+            <element signature="e#6023#6267#0" expanded="false" />
+            <element signature="e#6079#6261#0" expanded="false" />
+            <element signature="n#!!block;n#removePiece#0" expanded="false" />
+            <element signature="n#!!block;n#movePiece#0" expanded="false" />
+            <element signature="e#6681#8548#0" expanded="false" />
+            <element signature="e#7165#7272#0" expanded="false" />
+            <element signature="e#7298#7397#0" expanded="false" />
+            <element signature="e#7426#8540#0" expanded="false" />
+            <element signature="e#7994#8053#0" expanded="false" />
+            <element signature="e#8178#8428#0" expanded="false" />
+            <element signature="e#8248#8384#0" expanded="false" />
+            <element signature="e#8458#8530#0" expanded="false" />
+            <element signature="n#!!block;n#arrayShift#0" expanded="false" />
+            <element signature="n#!!block;n#changeTurn#0" expanded="false" />
+            <element signature="e#8746#8819#0" expanded="false" />
+            <element signature="e#8833#8877#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -510,88 +679,179 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/local_config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="22" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="25" selection-start="370" selection-end="370" vertical-scroll-proportion="-5.0">
+        <state line="94" column="1" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/checkers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="52" selection-start="11317" selection-end="11317" vertical-scroll-proportion="0.0">
+        <state line="191" column="0" selection-start="7846" selection-end="7846" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!block;n#getMoveActions#0" expanded="false" />
-            <element signature="e#844#856#0" expanded="false" />
-            <element signature="e#1142#1508#0" expanded="false" />
-            <element signature="e#1721#1833#0" expanded="false" />
-            <element signature="e#3047#4553#0" expanded="false" />
-            <element signature="e#3250#3362#0" expanded="false" />
-            <element signature="e#4576#6082#0" expanded="false" />
-            <element signature="e#4779#4891#0" expanded="false" />
-            <element signature="e#6105#7611#0" expanded="false" />
-            <element signature="e#6308#6420#0" expanded="false" />
+            <element signature="e#175#244#0" expanded="false" />
+            <element signature="e#258#329#0" expanded="false" />
+            <element signature="n#!!block;n#pieceIsLady#0" expanded="false" />
+            <element signature="n#!!block;n#isLadyPosition#0" expanded="false" />
+            <element signature="n#!!block;n#getLadyPieceMoveActions#0" expanded="false" />
+            <element signature="e#856#1520#0" expanded="false" />
+            <element signature="e#1577#2336#0" expanded="false" />
+            <element signature="e#1643#2307#0" expanded="false" />
+            <element signature="e#1733#2297#0" expanded="false" />
+            <element signature="e#2013#2213#0" expanded="false" />
+            <element signature="n#!!block;n#getNormalPieceMoveActions#0" expanded="false" />
+            <element signature="e#2648#3273#0" expanded="false" />
+            <element signature="e#2670#3225#0" expanded="false" />
+            <element signature="e#2840#3215#0" expanded="false" />
+            <element signature="e#3255#3267#0" expanded="false" />
+            <element signature="n#!!block;n#getEatActions#0" expanded="false" />
+            <element signature="e#3463#3599#0" expanded="false" />
+            <element signature="e#3613#3751#0" expanded="false" />
+            <element signature="n#!!block;n#getLadyEatActions#0" expanded="false" />
+            <element signature="e#4041#4303#0" expanded="false" />
+            <element signature="n#!!block;n#getLadyEatActionsRecursive#0" expanded="false" />
+            <element signature="e#4674#4861#0" expanded="false" />
+            <element signature="e#4875#5357#0" expanded="false" />
+            <element signature="e#4904#5350#0" expanded="false" />
+            <element signature="e#5412#7692#0" expanded="false" />
+            <element signature="e#5425#7672#0" expanded="false" />
+            <element signature="e#5842#7662#0" expanded="false" />
+            <element signature="e#5878#5994#0" expanded="false" />
+            <element signature="e#6047#6140#0" expanded="false" />
+            <element signature="e#6178#6273#0" expanded="false" />
+            <element signature="e#6376#7648#0" expanded="false" />
+            <element signature="e#7059#7316#0" expanded="false" />
+            <element signature="n#!!block;n#getNormalEatActions#0" expanded="false" />
+            <element signature="e#7977#8403#0" expanded="false" />
+            <element signature="e#8459#10673#0" expanded="false" />
+            <element signature="e#8472#10653#0" expanded="false" />
+            <element signature="e#8889#10643#0" expanded="false" />
+            <element signature="e#8925#9041#0" expanded="false" />
+            <element signature="e#9217#10629#0" expanded="false" />
+            <element signature="e#9900#10157#0" expanded="false" />
+            <element signature="e#10243#10362#0" expanded="false" />
             <element signature="n#!!block;n#getDiagonalMoves#0" expanded="false" />
+            <element signature="e#10895#11228#0" expanded="false" />
+            <element signature="e#10924#11221#0" expanded="false" />
+            <element signature="e#11242#11575#0" expanded="false" />
+            <element signature="e#11271#11568#0" expanded="false" />
             <element signature="n#!!block;n#hasWinner#0" expanded="false" />
-            <element signature="e#8710#9027#0" expanded="false" />
-            <element signature="e#8798#9021#0" expanded="false" />
-            <element signature="e#8854#8899#0" expanded="false" />
-            <element signature="e#8962#9011#0" expanded="false" />
-            <element signature="e#9062#9096#0" expanded="false" />
-            <element signature="e#9135#9171#0" expanded="false" />
-            <element signature="e#9185#9213#0" expanded="false" />
+            <element signature="e#11757#12074#0" expanded="false" />
+            <element signature="e#11845#12068#0" expanded="false" />
+            <element signature="e#11901#11946#0" expanded="false" />
+            <element signature="e#12009#12058#0" expanded="false" />
+            <element signature="e#12109#12143#0" expanded="false" />
+            <element signature="e#12182#12218#0" expanded="false" />
+            <element signature="e#12232#12260#0" expanded="false" />
             <element signature="n#!!block;n#concatLists#0" expanded="false" />
-            <element signature="e#9299#9336#0" expanded="false" />
+            <element signature="e#12346#12383#0" expanded="false" />
             <element signature="n#!!block;n#copyTable#0" expanded="false" />
-            <element signature="e#9453#9660#0" expanded="false" />
-            <element signature="e#9551#9613#0" expanded="false" />
+            <element signature="e#12500#12707#0" expanded="false" />
+            <element signature="e#12598#12660#0" expanded="false" />
             <element signature="n#!!block;n#copyNodeList#0" expanded="false" />
-            <element signature="e#9800#9921#0" expanded="false" />
-            <element signature="e#9830#9914#0" expanded="false" />
+            <element signature="e#12847#12968#0" expanded="false" />
+            <element signature="e#12877#12961#0" expanded="false" />
             <element signature="n#!!block;n#getPlayerPiecesPosition#0" expanded="false" />
-            <element signature="e#10073#10268#0" expanded="false" />
-            <element signature="e#10132#10262#0" expanded="false" />
-            <element signature="e#10184#10252#0" expanded="false" />
+            <element signature="e#13120#13315#0" expanded="false" />
+            <element signature="e#13179#13309#0" expanded="false" />
+            <element signature="e#13231#13299#0" expanded="false" />
+            <element signature="n#!!block;n#getPossibleMovements#0" expanded="false" />
+            <element signature="e#13537#13885#0" expanded="false" />
+            <element signature="n#!!block;n#iaMove#0" expanded="false" />
+            <element signature="e#14028#14158#0" expanded="false" />
+            <element signature="e#14172#14311#0" expanded="false" />
+            <element signature="n#!!block;n#addCoordinates#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="55" selection-start="800" selection-end="800" vertical-scroll-proportion="-12.5">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="277" column="17" selection-start="8565" selection-end="8565" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="20" column="36" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!block;n#addEventListeners#0" expanded="false" />
+            <element signature="n#!!block;n#handleHintClick#0" expanded="false" />
+            <element signature="e#566#648#0" expanded="false" />
+            <element signature="e#662#879#0" expanded="false" />
+            <element signature="e#768#822#0" expanded="false" />
+            <element signature="n#!!block;n#handleCellClick#0" expanded="false" />
+            <element signature="e#1045#3012#0" expanded="false" />
+            <element signature="e#1152#3006#0" expanded="false" />
+            <element signature="e#1888#2299#0" expanded="false" />
+            <element signature="e#1976#2285#0" expanded="false" />
+            <element signature="e#2137#2267#0" expanded="false" />
+            <element signature="e#2361#2996#0" expanded="false" />
+            <element signature="e#2448#2982#0" expanded="false" />
+            <element signature="e#2808#2964#0" expanded="false" />
+            <element signature="n#!!block;n#handlePieceClick#0" expanded="false" />
+            <element signature="e#3247#3342#0" expanded="false" />
+            <element signature="e#3279#3336#0" expanded="false" />
+            <element signature="e#3402#3443#0" expanded="false" />
+            <element signature="n#!!block;n#highlightMoves#0" expanded="false" />
+            <element signature="e#3953#4012#0" expanded="false" />
+            <element signature="e#4075#4260#0" expanded="false" />
+            <element signature="e#4167#4254#0" expanded="false" />
+            <element signature="n#!!block;n#addCellHighlight#0" expanded="false" />
+            <element signature="n#!!block;n#removeCellHighlights#0" expanded="false" />
+            <element signature="e#4498#4547#0" expanded="false" />
+            <element signature="n#!!block;n#removePieceSelections#0" expanded="false" />
+            <element signature="e#4633#4681#0" expanded="false" />
+            <element signature="n#!!block;n#initTable#0" expanded="false" />
+            <element signature="e#4817#5268#0" expanded="false" />
+            <element signature="e#4968#5155#0" expanded="false" />
+            <element signature="n#!!block;n#initTableStructure#0" expanded="false" />
+            <element signature="e#5396#5533#0" expanded="false" />
+            <element signature="e#5464#5501#0" expanded="false" />
+            <element signature="n#!!block;n#initPieces#0" expanded="false" />
+            <element signature="e#5728#5966#0" expanded="false" />
+            <element signature="e#5784#5960#0" expanded="false" />
+            <element signature="e#6023#6267#0" expanded="false" />
+            <element signature="e#6079#6261#0" expanded="false" />
+            <element signature="n#!!block;n#removePiece#0" expanded="false" />
+            <element signature="n#!!block;n#movePiece#0" expanded="false" />
+            <element signature="e#6681#8548#0" expanded="false" />
+            <element signature="e#7165#7272#0" expanded="false" />
+            <element signature="e#7298#7397#0" expanded="false" />
+            <element signature="e#7426#8540#0" expanded="false" />
+            <element signature="e#7994#8053#0" expanded="false" />
+            <element signature="e#8178#8428#0" expanded="false" />
+            <element signature="e#8248#8384#0" expanded="false" />
+            <element signature="e#8458#8530#0" expanded="false" />
+            <element signature="n#!!block;n#arrayShift#0" expanded="false" />
+            <element signature="n#!!block;n#changeTurn#0" expanded="false" />
+            <element signature="e#8746#8819#0" expanded="false" />
+            <element signature="e#8833#8877#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/minimax.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="12" selection-start="2184" selection-end="2184" vertical-scroll-proportion="0.0">
+        <state line="107" column="4" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/constants.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="127" selection-end="127" vertical-scroll-proportion="0.14705883">
+        <state line="13" column="74" selection-start="286" selection-end="286" vertical-scroll-proportion="0.251938">
           <folding />
         </state>
       </provider>

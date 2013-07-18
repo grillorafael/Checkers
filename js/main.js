@@ -2,14 +2,15 @@ var table = [];
 var tableSize = 8;
 var ANIMATION_SPEED = 500;
 var ENABLE_HINT = false;
-var currentTurn = TOP_PLAYER;
+var currentTurn = BOTTOM_PLAYER;
+var ENABLE_IA = true;
 
 function initGame()
 {
     initTable();
     initPieces();
     addEventListeners();
-    iaMove();
+    changeTurn();
 }
 
 function addEventListeners()
@@ -253,6 +254,11 @@ function movePiece(from, movements, removedPieces)
             removeCellHighlights();
             if(movements.length == 0)
             {
+                if(isLadyPosition(to, currentTurn))
+                {
+                    table[to.row][to.column] += LADY_ADD_VALUE;
+                    piece.addClass("checkers-lady");
+                }
                 changeTurn();
             }
             else
@@ -275,7 +281,7 @@ function changeTurn()
     if(currentTurn)
     {
         currentTurn = TOP_PLAYER;
-        iaMove();
+        if(ENABLE_IA) iaMove();
     }
     else
     {

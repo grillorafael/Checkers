@@ -89,6 +89,16 @@ body
   height: 6em;
 }
 
+.selected
+{
+  .box-shadow(white, 20px);
+}
+
+.checkers-lady
+{
+  .box-inset-shadow;
+}
+
 .checkers-piece
 {
   width: 5em;
@@ -97,11 +107,6 @@ body
   margin-top: .5em;
   border: 1px solid white;
   .rounded-corners(5em);
-}
-
-.selected
-{
-  .box-shadow(white, 20px);
 }
 
 .checkers-cell[data-color='true']
