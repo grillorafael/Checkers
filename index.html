@@ -2,20 +2,71 @@
 <html>
 <head>
     <title>Checkers</title>
-    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=0.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="/css/style.min.css"/>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
     <script src="/js/jquery-2.0.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="/js/constants.js"></script>
     <script src="/js/main.min.js"></script>
     <script src="/js/checkers.min.js"></script>
     <script src="/js/minimax.min.js"></script>
 </head>
 <body onload="initGame()">
-    <div class="container">
-        <div id="checkersTable"></div>
-        <div id="turnShower" data-color="0"> CURRENT TURN </div>
-        <div id="hint" class="button" data-state="false">I NEED A HINT!</div>
+    <div class="game-container">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#game" data-toggle="tab">Game</a></li>
+            <li><a href="#rules" data-toggle="tab">Rules</a></li>
+            <li><a href="#about" data-toggle="tab">About</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="game" class="tab-pane active">
+                <div id="checkersTable"></div>
+                <div id="turnShower" data-color="0"> CURRENT TURN </div>
+                <br/>
+                <a id="hint" class="btn btn-block btn-warning btn-large " data-toggle="button">I NEED A HINT!</a>
+            </div>
+            <div class="tab-pane" id="rules">
+                TBA
+            </div>
+            <div class="tab-pane" id="about">
+                <strong>Status:</strong> Work in Progress
+                <br/>
+                <strong>Motivation:</strong> A Project from an IA Class about Minimax Algorithm
+                <br/>
+                <strong>Source Code:</strong>
+                <ul>
+                    <li><a href="js/minimax.js" target="_blank">Minimax Script File</a></li>
+                    <li><a href="js/checkers.js" target="_blank">Checkers Script File</a></li>
+                    <li><a href="js/main.js" target="_blank">Main Script File</a></li>
+                    <li><a href="js/constants.js" target="_blank">Constants Script File</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameConfigModal" class="modal hide fade" data-backdrop="static">
+        <div class="modal-header">
+            <h3>Please select the Game Mode</h3>
+        </div>
+        <div class="modal-body">
+            <a href="javascript:enableIa(true)" class="btn btn-warning btn-large btn-block">Against IA</a>
+            <a href="javascript:enableIa(false)" class="btn btn-primary btn-large btn-block">2 Players</a>
+            <a href="javascript:enableIa('ia')" class="btn btn-danger btn-large btn-block">IA vs IA</a>
+        </div>
+    </div>
+
+    <div id="winnerModal" class="modal hide fade" data-backdrop="static">
+        <div class="modal-header">
+            <h3>The Game is Over!</h3>
+        </div>
+        <div class="modal-body">
+            <p>Congratulations <span id="winnerName"></span></p>
+            <a href="javascript:location.reload();" class="btn btn-success btn-large btn-block">Restart</a>
+        </div>
     </div>
 </body>
 </html>

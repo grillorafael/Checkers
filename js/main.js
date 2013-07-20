@@ -2,15 +2,33 @@ var table = [];
 var tableSize = 8;
 var ANIMATION_SPEED = 500;
 var ENABLE_HINT = false;
-var currentTurn = BOTTOM_PLAYER;
+var currentTurn = TOP_PLAYER;
 var ENABLE_IA = true;
+var IA_VS_IA = false;
 
 function initGame()
 {
     initTable();
     initPieces();
     addEventListeners();
-    changeTurn();
+    $('#gameConfigModal').modal('toggle');
+    $('#gameConfigModal').on('hidden', function(){
+        changeTurn();
+    })
+}
+
+function enableIa(value)
+{
+    if(value == 'ia')
+    {
+        IA_VS_IA = true;
+        ENABLE_IA = true;
+    }
+    else
+    {
+        ENABLE_IA = value;
+    }
+    $('#gameConfigModal').modal('hide');
 }
 
 function addEventListeners()
@@ -18,6 +36,10 @@ function addEventListeners()
     $(".checkers-cell").click(function(){handleCellClick(this);});
     $(".checkers-piece").click(function(){handlePieceClick(this);});
     $("#hint").click(function(){handleHintClick(this);});
+
+    $(window).resize(function() {
+        adjustSizes();
+    });
 }
 
 function handleHintClick(button)
@@ -37,7 +59,7 @@ function handleHintClick(button)
         }
         $("#hint").html("I DON'T NEED ANY HINT!");
     }
-    $("#hint").attr("data-state", ENABLE_HINT);
+    //$("#hint").attr("data-state", ENABLE_HINT);
 }
 
 function handleCellClick(cell)
@@ -206,6 +228,21 @@ function initPieces()
             $("div[data-row='"+i+"'] .checkers-cell[data-column='"+j+"']").html(checkersPiece.replace("#color#", BOTTOM_PLAYER));
         }
     }
+
+    adjustSizes();
+}
+
+function adjustSizes()
+{
+    var tableWidth = $("#checkersTable").width();
+    var cellWidth = tableWidth / table.length;
+    $(".checkers-cell").width(cellWidth);
+    $(".checkers-cell").height(cellWidth);
+
+    var checkersSize = cellWidth * 0.8;
+    $(".checkers-piece").width(cellWidth * 0.8);
+    $(".checkers-piece").height(cellWidth * 0.8);
+    $(".checkers-piece").css('margin-top', ((cellWidth - checkersSize)/2) + "px");
 }
 
 function removePiece(piecePosition)
@@ -278,14 +315,24 @@ function arrayShift(array)
 
 function changeTurn()
 {
-    if(currentTurn)
+    var winner = hasWinner(table);
+    if(winner != null)
     {
-        currentTurn = TOP_PLAYER;
-        if(ENABLE_IA) iaMove();
+        $("#winnerName").html(winner == TOP_PLAYER ? "Top Player" : "Bottom Player");
+        $('#winnerModal').modal('toggle');
     }
     else
     {
-        currentTurn = BOTTOM_PLAYER;
+        if(currentTurn)
+        {
+            currentTurn = TOP_PLAYER;
+            if(ENABLE_IA) iaMove(IA_PLAYER);
+        }
+        else
+        {
+            if(ENABLE_IA && IA_VS_IA) iaMove(HUMAN_PLAYER);
+            currentTurn = BOTTOM_PLAYER;
+        }
+        $("#turnShower").attr("data-color", currentTurn);
     }
-    $("#turnShower").attr("data-color", currentTurn);
 }

@@ -10,28 +10,6 @@ body
   clear: both;
 }
 
-#hint
-{
-  line-height: 2em;
-  font-size: 2em;
-  text-align: center;
-  padding: 0.2em;
-  height: 2em;
-  margin-top: 0.2em;
-  font-weight: bold;
-  color: white;
-}
-
-#hint[data-state='true']
-{
-  background-color: green;
-}
-
-#hint[data-state='false']
-{
-  background-color: red;
-}
-
 .button:hover
 {
   cursor: pointer;
@@ -42,9 +20,9 @@ body
   .rounded-corners;
 }
 
-.container
+.game-container
 {
-  width: 674px;
+  max-width: 550px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -85,8 +63,8 @@ body
 .checkers-cell
 {
   float:left;
-  width: 6em;
-  height: 6em;
+  width: 4.89em;
+  height: 4.89em;
 }
 
 .selected
@@ -94,19 +72,20 @@ body
   .box-shadow(white, 20px);
 }
 
-.checkers-lady
-{
-  .box-inset-shadow;
-}
-
 .checkers-piece
 {
-  width: 5em;
-  height: 5em;
+  width: 4em;
+  height: 4em;
   margin: auto;
   margin-top: .5em;
   border: 1px solid white;
-  .rounded-corners(5em);
+  .rounded-corners(4em);
+}
+
+.checkers-lady
+{
+  .border-box;
+  border: 7px solid #ffff00;
 }
 
 .checkers-cell[data-color='true']
@@ -159,4 +138,10 @@ body
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.border-box(){
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
 }

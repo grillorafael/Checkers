@@ -1,21 +1,26 @@
-function maxValue(table, iteration, alfa, beta)
+function maxValue(table, iteration, alfa, beta, player)
 {
     iteration++;
     var winnerPlayer = hasWinner(table);
     if(winnerPlayer != null)
     {
-        return winnerPlayer == IA_PLAYER ? Number.POSITIVE_INFINITY - 1 : Number.NEGATIVE_INFINITY + 1;
+        return winnerPlayer == player ? Number.POSITIVE_INFINITY - 1 : Number.NEGATIVE_INFINITY + 1;
     }
     else if(iteration > MAX_ITERATION)
     {
-        return utility(table, IA_PLAYER);
+        return utility(table, player);
     }
 
     var v = Number.NEGATIVE_INFINITY;
-    var possibleMovements = getPossibleMovements(table, IA_PLAYER);
+    var possibleMovements = getPossibleMovements(table, player);
+    if(possibleMovements.length == 0)
+    {
+        return Number.POSITIVE_INFINITY - 1;
+    }
+
     for(var i = 0; i < possibleMovements.length; i++)
     {
-        v = Math.max(v, minValue(possibleMovements[i].table, iteration, alfa, beta));
+        v = Math.max(v, minValue(possibleMovements[i].table, iteration, alfa, beta, player));
         if(v >= beta)
         {
             return v;
@@ -26,24 +31,28 @@ function maxValue(table, iteration, alfa, beta)
     return v;
 }
 
-function minValue(table, iteration, alfa, beta)
+function minValue(table, iteration, alfa, beta, player)
 {
     iteration++;
     var winnerPlayer = hasWinner(table);
     if(winnerPlayer != null)
     {
-        return winnerPlayer == IA_PLAYER ? Number.POSITIVE_INFINITY -1 : Number.NEGATIVE_INFINITY + 1;
+        return winnerPlayer == player ? Number.POSITIVE_INFINITY -1 : Number.NEGATIVE_INFINITY + 1;
     }
     else if(iteration > MAX_ITERATION)
     {
-        return utility(table, IA_PLAYER);
+        return utility(table, player);
     }
 
     var v = Number.POSITIVE_INFINITY;
-    var possibleMovements = getPossibleMovements(table, HUMAN_PLAYER);
+    var possibleMovements = getPossibleMovements(table, player);
+    if(possibleMovements.length == 0)
+    {
+        return Number.POSITIVE_INFINITY - 1;
+    }
     for(var i = 0; i < possibleMovements.length; i++)
     {
-        v = Math.min(v, maxValue(possibleMovements[i].table, iteration, alfa, beta));
+        v = Math.min(v, maxValue(possibleMovements[i].table, iteration, alfa, beta, player));
         if(v <= alfa)
         {
             return v;
@@ -54,14 +63,14 @@ function minValue(table, iteration, alfa, beta)
     return v;
 }
 
-function minimaxDecision(table)
+function minimaxDecision(table, player)
 {
-    var possibleMovements = getPossibleMovements(table, IA_PLAYER);
+    var possibleMovements = getPossibleMovements(table, player);
     var bestMovementValue = Number.NEGATIVE_INFINITY;
     var bestMovementIndex = null;
     for(var i = 0; i < possibleMovements.length; i++)
     {
-        var currentMovementValue = minValue(possibleMovements[i].table, 0, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY);
+        var currentMovementValue = minValue(possibleMovements[i].table, 0, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY, player);
         if(currentMovementValue > bestMovementValue)
         {
             bestMovementValue = currentMovementValue;
@@ -74,7 +83,7 @@ function minimaxDecision(table)
 
 function utility(table, player)
 {
-    return utilityBalanced(table, player);
+    return utilityGreedy(table, player);
 }
 
 function utilityGreedy(table, player)
@@ -85,15 +94,16 @@ function utilityGreedy(table, player)
     {
         for(var j = 0; j < table[0].length; j++)
         {
-            if(table[i][j] != EMPTY_CELL && table[i][j] != player)
-            {
-                if(table[i][j] > 1) enemyPieces += 4;
-                enemyPieces++;
-            }
-            else if(table[i][j] == player)
+
+            if(table[i][j] == player || table[i][j] == player + LADY_ADD_VALUE || table[i][j] == player - LADY_ADD_VALUE)
             {
                 if(table[i][j] > 1) playerPieces += 10;
                 playerPieces++;
+            }
+            else if(table[i][j] != EMPTY_CELL)
+            {
+                if(table[i][j] > 1) enemyPieces += 4;
+                enemyPieces++;
             }
         }
     }
@@ -108,15 +118,15 @@ function utilityBalanced(table, player)
     {
         for(var j = 0; j < table[0].length; j++)
         {
-            if(table[i][j] != EMPTY_CELL && table[i][j] != player)
-            {
-                if(table[i][j] > 1) enemyPieces += 4;
-                enemyPieces++;
-            }
-            else if(table[i][j] == player)
+            if(table[i][j] == player || table[i][j] == player + LADY_ADD_VALUE || table[i][j] == player - LADY_ADD_VALUE)
             {
                 if(table[i][j] > 1) playerPieces += 10;
                 playerPieces++;
+            }
+            else if(table[i][j] != EMPTY_CELL)
+            {
+                if(table[i][j] > 1) enemyPieces += 4;
+                enemyPieces++;
             }
         }
     }

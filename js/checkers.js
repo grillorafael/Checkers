@@ -270,11 +270,11 @@ function hasWinner(table)
     {
         for(var j = 0; (j < table[0].length) && (!hasTop || !hasBottom); j++)
         {
-            if(table[i][j] == TOP_PLAYER)
+            if(table[i][j] == TOP_PLAYER || table[i][j] == LADY_TOP_PLAYER)
             {
                 hasTop = true
             }
-            else if(table[i][j] == BOTTOM_PLAYER)
+            else if(table[i][j] == BOTTOM_PLAYER || table[i][j] == LADY_BOTTOM_PLAYER)
             {
                 hasBottom = true;
             }
@@ -339,7 +339,7 @@ function getPlayerPiecesPosition(table, player)
     {
         for(var j = 0; j < table[0].length; j++)
         {
-            if(table[i][j] == player)
+            if(table[i][j] == player || table[i][j] == player + LADY_ADD_VALUE || table[i][j] == player - LADY_ADD_VALUE)
             {
                 positions.push({row: i, column: j});
             }
@@ -368,9 +368,9 @@ function getPossibleMovements(table, player)
     return possibleMovementsTotal;
 }
 
-function iaMove()
+function iaMove(player)
 {
-    var movement = minimaxDecision(table);
+    var movement = minimaxDecision(table, player);
     if(movement.type == MOVE_PIECE)
     {
         movePiece({row:movement.fromRow, column: movement.fromColumn}, [{row:movement.row, column: movement.column}], []);
