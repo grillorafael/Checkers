@@ -1,25 +1,31 @@
+var currentMaxIteration = MIN_ITERATION;
+var searchedSpace = 0;
+
 function maxValue(table, iteration, alfa, beta, player)
 {
     iteration++;
+    //var winnerPlayer = hasWinner(table, player);
     var winnerPlayer = hasWinner(table);
     if(winnerPlayer != null)
     {
-        return winnerPlayer == player ? Number.POSITIVE_INFINITY - 1 : Number.NEGATIVE_INFINITY + 1;
+        return winnerPlayer == player ? Number.MAX_VALUE - iteration : Number.NEGATIVE_INFINITY;
     }
-    else if(iteration > MAX_ITERATION)
+    else if(iteration > currentMaxIteration)
     {
         return utility(table, player);
     }
 
     var v = Number.NEGATIVE_INFINITY;
     var possibleMovements = getPossibleMovements(table, player);
-    if(possibleMovements.length == 0)
+    var len = possibleMovements.length;
+    if(len == 0)
     {
-        return Number.POSITIVE_INFINITY - 1;
+        return v;
     }
 
-    for(var i = 0; i < possibleMovements.length; i++)
+    for(var i = 0; i < len; i++)
     {
+        searchedSpace++;
         v = Math.max(v, minValue(possibleMovements[i].table, iteration, alfa, beta, player));
         if(v >= beta)
         {
@@ -34,24 +40,27 @@ function maxValue(table, iteration, alfa, beta, player)
 function minValue(table, iteration, alfa, beta, player)
 {
     iteration++;
+    //var winnerPlayer = hasWinner(table, player);
     var winnerPlayer = hasWinner(table);
     if(winnerPlayer != null)
     {
-        return winnerPlayer == player ? Number.POSITIVE_INFINITY -1 : Number.NEGATIVE_INFINITY + 1;
+        return winnerPlayer == player ? Number.MAX_VALUE - iteration : Number.NEGATIVE_INFINITY;
     }
-    else if(iteration > MAX_ITERATION)
+    else if(iteration > currentMaxIteration)
     {
         return utility(table, player);
     }
 
-    var v = Number.POSITIVE_INFINITY;
-    var possibleMovements = getPossibleMovements(table, player);
-    if(possibleMovements.length == 0)
+    var v = Number.POSITIVE_INFINITY, len;
+    var possibleMovements = getPossibleMovements(table, getEnemyPlayer(player));
+    len = possibleMovements.length
+    if(len == 0)
     {
-        return Number.POSITIVE_INFINITY - 1;
+        return v;
     }
-    for(var i = 0; i < possibleMovements.length; i++)
+    for(var i = 0; i < len; i++)
     {
+        searchedSpace++;
         v = Math.min(v, maxValue(possibleMovements[i].table, iteration, alfa, beta, player));
         if(v <= alfa)
         {
@@ -65,34 +74,50 @@ function minValue(table, iteration, alfa, beta, player)
 
 function minimaxDecision(table, player)
 {
+    searchedSpace++
+    currentMaxIteration = Math.floor(MIN_ITERATION + (1 - (getTotalPieces(table) / maxPieces)) * MAX_ITERATION);
+    var date1 = new Date();
     var possibleMovements = getPossibleMovements(table, player);
     var bestMovementValue = Number.NEGATIVE_INFINITY;
     var bestMovementIndex = null;
-    for(var i = 0; i < possibleMovements.length; i++)
+    var len;
+    for(var i = 0, len = possibleMovements.length; i < len; i++)
     {
+        searchedSpace++;
         var currentMovementValue = minValue(possibleMovements[i].table, 0, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY, player);
-        if(currentMovementValue > bestMovementValue)
+        if(currentMovementValue >= bestMovementValue)
         {
             bestMovementValue = currentMovementValue;
             bestMovementIndex = i;
         }
     }
 
+    var date2 = new Date();
+
+    var diff = date2 - date1;
+
+    console.log(diff / 1000);
+    console.log(currentMaxIteration);
+    console.log(searchedSpace);
+
+    searchedSpace = 0;
     return possibleMovements[bestMovementIndex];
 }
 
 function utility(table, player)
 {
-    return utilityGreedy(table, player);
+    var value = utilityBalanced(table, player);
+    return value;
 }
 
 function utilityGreedy(table, player)
 {
     var enemyPieces = 0;
     var playerPieces = 0;
-    for(var i = 0; i < table.length; i++)
+    var len1, len2;
+    for(var i = 0, len1 = table.length; i < len1; i++)
     {
-        for(var j = 0; j < table[0].length; j++)
+        for(var j = 0, len2 = table[0].length; j < len2; j++)
         {
 
             if(table[i][j] == player || table[i][j] == player + LADY_ADD_VALUE || table[i][j] == player - LADY_ADD_VALUE)
@@ -114,9 +139,10 @@ function utilityBalanced(table, player)
 {
     var enemyPieces = 0;
     var playerPieces = 0;
-    for(var i = 0; i < table.length; i++)
+    var len1, len2;
+    for(var i = 0, len1 = table.length; i < len1; i++)
     {
-        for(var j = 0; j < table[0].length; j++)
+        for(var j = 0, len2 = table[0].length; j < len2; j++)
         {
             if(table[i][j] == player || table[i][j] == player + LADY_ADD_VALUE || table[i][j] == player - LADY_ADD_VALUE)
             {

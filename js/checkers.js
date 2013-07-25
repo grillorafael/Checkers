@@ -41,7 +41,8 @@ function getLadyPieceMoveActions(table, piecePosition)
         {direction:NO, type: MOVE_PIECE, row: piecePosition.row - 1, column: piecePosition.column -1, fromRow: piecePosition.row, fromColumn:piecePosition.column}
     ];
 
-    for(var i = 0; i < diagonalMoves.length; i++)
+    var len;
+    for(var i = 0, len = diagonalMoves.length; i < len; i++)
     {
         var newPosition = diagonalMoves[i];
         try
@@ -69,7 +70,8 @@ function getNormalPieceMoveActions(table, piecePosition)
 
     var newPositions = getDiagonalMoves(pieceColor, piecePosition);
 
-    for(var i = 0 ; i < newPositions.length ; i++)
+    var len;
+    for(var i = 0, len = newPositions.length ; i < len ; i++)
     {
         try
         {
@@ -78,7 +80,7 @@ function getNormalPieceMoveActions(table, piecePosition)
             if(table[position.row][position.column] == EMPTY_CELL)
             {
                 tableAux[position.row][position.column] = pieceColor;
-                if(isLadyPosition(piecePosition, pieceColor)) tableAux[position.row][position.column] += LADY_ADD_VALUE;
+                if(isLadyPosition(position, pieceColor) && pieceColor <= 1) tableAux[position.row][position.column] += LADY_ADD_VALUE;
                 tableAux[piecePosition.row][piecePosition.column] = EMPTY_CELL;
                 position.table = tableAux;
                 possibleMoves.push(position);
@@ -110,7 +112,8 @@ function getLadyEatActions(checkersTable, piecePosition, movementPositions, remo
     var ladyMovements = getLadyPieceMoveActions(table, piecePosition);
     var possibleLadyMovements = [];
 
-    for(var i = 0; i < ladyMovements.length; i++)
+    var len;
+    for(var i = 0, len = ladyMovements.length; i < len; i++)
     {
         concatLists(possibleLadyMovements, getLadyEatActionsRecursive(checkersTable, ladyMovements[i], movementPositions, removedPiecesPositions,
             initialPiecePosition, checkersTable[initialPiecePosition.row][initialPiecePosition.column], 0));
@@ -139,7 +142,8 @@ function getLadyEatActionsRecursive(checkersTable, piecePosition, movementPositi
         ];
     }
 
-    for(var i = 0; i < newPositions.length; i++)
+    var len;
+    for(var i = 0, len = newPositions.length; i < len; i++)
     {
         try{
             if(checkersTable[newPositions[i].row][newPositions[i].column] != EMPTY_CELL
@@ -200,7 +204,8 @@ function getNormalEatActions(checkersTable, piecePosition, movementPositions, re
         {type: MOVE_PIECE, row: piecePosition.row - 1, column: piecePosition.column + 1, direction: NE}
     ];
 
-    for(var i = 0; i < newPositions.length; i++)
+    var len;
+    for(var i = 0, len = newPositions.length; i < len; i++)
     {
         try{
             if(checkersTable[newPositions[i].row][newPositions[i].column] != EMPTY_CELL
@@ -266,9 +271,11 @@ function hasWinner(table)
 {
     var hasTop = false;
     var hasBottom = false;
-    for(var i = 0; i < table.length && (!hasTop || !hasBottom); i++)
+    var len;
+    for(var i = 0, len = table.length; i < len && (!hasTop || !hasBottom); i++)
     {
-        for(var j = 0; (j < table[0].length) && (!hasTop || !hasBottom); j++)
+        var lenj;
+        for(var j = 0, lenj = table[0].length; (j < lenj) && (!hasTop || !hasBottom); j++)
         {
             if(table[i][j] == TOP_PLAYER || table[i][j] == LADY_TOP_PLAYER)
             {
@@ -281,6 +288,19 @@ function hasWinner(table)
         }
     }
 
+//    var playerMovements = getPossibleMovements(table, player);
+//    if(playerMovements.length == 0)
+//    {
+//        if(player == TOP_PLAYER)
+//        {
+//            return BOTTOM_PLAYER;
+//        }
+//        else
+//        {
+//            return TOP_PLAYER;
+//        }
+//    }
+//    else
     if(hasTop && !hasBottom)
     {
         return TOP_PLAYER;
@@ -297,7 +317,8 @@ function hasWinner(table)
 
 function concatLists(list1, list2)
 {
-    for(var i = 0; i< list2.length; i++)
+    var len;
+    for(var i = 0, len = list2.length; i < len; i++)
     {
         list1.push(list2[i]);
     }
@@ -306,10 +327,11 @@ function concatLists(list1, list2)
 function copyTable(tableToCopy)
 {
     var copiedTable = [];
-    for(var i = 0; i < tableToCopy.length ; i++)
+    var len1, len2;
+    for(var i = 0, len1 = tableToCopy.length; i < len1 ; i++)
     {
         var copiedTableRow = [];
-        for(var j = 0; j < tableToCopy[0].length; j++)
+        for(var j = 0, len2 = tableToCopy[0].length; j < len2; j++)
         {
             copiedTableRow[j] = tableToCopy[i][j];
         }
@@ -321,7 +343,8 @@ function copyTable(tableToCopy)
 function copyNodeList(nodeList)
 {
     var copiedNodeList = [];
-    for(var i = 0; i < nodeList.length; i++)
+    var len;
+    for(var i = 0, len = nodeList.length; i < len; i++)
     {
         copiedNodeList[i] = {
             row: nodeList[i].row,
@@ -334,10 +357,10 @@ function copyNodeList(nodeList)
 
 function getPlayerPiecesPosition(table, player)
 {
-    var positions = [];
-    for(var i = 0; i < table.length; i++)
+    var positions = [], len1, len2;
+    for(var i = 0, len1 = table.length; i < len1; i++)
     {
-        for(var j = 0; j < table[0].length; j++)
+        for(var j = 0, len2 = table[0].length; j < len2; j++)
         {
             if(table[i][j] == player || table[i][j] == player + LADY_ADD_VALUE || table[i][j] == player - LADY_ADD_VALUE)
             {
@@ -354,7 +377,8 @@ function getPossibleMovements(table, player)
     var positions = getPlayerPiecesPosition(table, player);
 
     var possibleMovementsTotal = [];
-    for(var k = 0; k < positions.length; k++)
+    var len = positions.length;
+    for(var k = 0; k < len; k++)
     {
         var positionObject = positions[k];
 
@@ -365,7 +389,30 @@ function getPossibleMovements(table, player)
         concatLists(possibleMovementsTotal, possibleMovements);
     }
 
+    len = possibleMovementsTotal.length;
+    for(var i = 0; i < len; i++)
+    {
+        possibleMovementsTotal[i].value = utility(possibleMovementsTotal[i].table, player);
+    }
+    possibleMovementsTotal.sort(function(a, b){
+        return b.value - a.value
+    });
+
     return possibleMovementsTotal;
+}
+
+function getTotalPieces(table)
+{
+    var len1, len2, totalCount = 0;
+    for(var i = 0, len1 = table.length; i < len1; i++)
+    {
+        for(var j = 0, len2 = table[0].length; j < len2; j++)
+        {
+            if(table[i][j] != EMPTY_CELL) totalCount++;
+        }
+    }
+
+    return totalCount;
 }
 
 function iaMove(player)
@@ -379,6 +426,12 @@ function iaMove(player)
     {
         movePiece({row:movement.fromRow, column: movement.fromColumn}, movement.movementPositions, movement.removedPiecesPosition);
     }
+}
+
+function getEnemyPlayer(player)
+{
+    if(player == TOP_PLAYER) return BOTTOM_PLAYER;
+    return TOP_PLAYER;
 }
 
 function addCoordinates(c1, c2)

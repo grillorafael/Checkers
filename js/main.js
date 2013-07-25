@@ -5,12 +5,14 @@ var ENABLE_HINT = false;
 var currentTurn = TOP_PLAYER;
 var ENABLE_IA = true;
 var IA_VS_IA = false;
+var maxPieces;
 
 function initGame()
 {
     initTable();
     initPieces();
     addEventListeners();
+    maxPieces = getTotalPieces(table);
     $('#gameConfigModal').modal('toggle');
     $('#gameConfigModal').on('hidden', function(){
         changeTurn();
@@ -291,7 +293,7 @@ function movePiece(from, movements, removedPieces)
             removeCellHighlights();
             if(movements.length == 0)
             {
-                if(isLadyPosition(to, currentTurn))
+                if(isLadyPosition(to, currentTurn) && !pieceIsLady(to))
                 {
                     table[to.row][to.column] += LADY_ADD_VALUE;
                     piece.addClass("checkers-lady");
@@ -315,6 +317,15 @@ function arrayShift(array)
 
 function changeTurn()
 {
+    if(currentTurn)
+    {
+        currentTurn = TOP_PLAYER;
+    }
+    else
+    {
+        currentTurn = BOTTOM_PLAYER;
+    }
+
     var winner = hasWinner(table);
     if(winner != null)
     {
@@ -325,13 +336,11 @@ function changeTurn()
     {
         if(currentTurn)
         {
-            currentTurn = TOP_PLAYER;
-            if(ENABLE_IA) iaMove(IA_PLAYER);
+            if(ENABLE_IA && IA_VS_IA) iaMove(HUMAN_PLAYER);
         }
         else
         {
-            if(ENABLE_IA && IA_VS_IA) iaMove(HUMAN_PLAYER);
-            currentTurn = BOTTOM_PLAYER;
+            if(ENABLE_IA) iaMove(IA_PLAYER);
         }
         $("#turnShower").attr("data-color", currentTurn);
     }
