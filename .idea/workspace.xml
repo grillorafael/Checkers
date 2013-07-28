@@ -75,25 +75,25 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="256" column="19" selection-start="7444" selection-end="7444" vertical-scroll-proportion="0.0">
+            <state line="328" column="25" selection-start="9795" selection-end="9795" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkers.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="checkers.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/checkers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="261" column="77" selection-start="11377" selection-end="11377" vertical-scroll-proportion="0.0">
+            <state line="304" column="9" selection-start="12533" selection-end="12533" vertical-scroll-proportion="0.3324573">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="minimax.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="minimax.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/minimax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="58" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.019379845">
+            <state line="77" column="58" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,12 +149,12 @@
         <option value="$PROJECT_DIR$/js/jquery.avgrund.js" />
         <option value="$PROJECT_DIR$/css/avgrund.css" />
         <option value="$PROJECT_DIR$/css/reveal.css" />
-        <option value="$PROJECT_DIR$/js/checkers.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/constants.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/less/style.less" />
         <option value="$PROJECT_DIR$/js/minimax.js" />
+        <option value="$PROJECT_DIR$/js/checkers.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -228,8 +228,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -249,19 +249,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -290,6 +277,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -345,7 +345,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -507,23 +507,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/minimax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="58" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="19" selection-start="7444" selection-end="7444" vertical-scroll-proportion="0.0">
+        <state line="328" column="25" selection-start="9795" selection-end="9795" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/checkers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="261" column="77" selection-start="11377" selection-end="11377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/minimax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="58" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.019379845">
+        <state line="304" column="9" selection-start="12533" selection-end="12533" vertical-scroll-proportion="0.3324573">
           <folding />
         </state>
       </provider>

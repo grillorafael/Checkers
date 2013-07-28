@@ -326,7 +326,7 @@ function changeTurn()
         currentTurn = BOTTOM_PLAYER;
     }
 
-    var winner = hasWinner(table);
+    var winner = checkWinner(table,currentTurn);
     if(winner != null)
     {
         $("#winnerName").html(winner == TOP_PLAYER ? "Top Player" : "Bottom Player");

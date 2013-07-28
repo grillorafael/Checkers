@@ -288,19 +288,6 @@ function hasWinner(table)
         }
     }
 
-//    var playerMovements = getPossibleMovements(table, player);
-//    if(playerMovements.length == 0)
-//    {
-//        if(player == TOP_PLAYER)
-//        {
-//            return BOTTOM_PLAYER;
-//        }
-//        else
-//        {
-//            return TOP_PLAYER;
-//        }
-//    }
-//    else
     if(hasTop && !hasBottom)
     {
         return TOP_PLAYER;
@@ -313,6 +300,23 @@ function hasWinner(table)
     {
         return null;
     }
+}
+
+function checkWinner(table,player)
+{
+    var playerMovements = getPossibleMovements(table, player);
+    if(playerMovements.length == 0)
+    {
+        if(player == TOP_PLAYER)
+        {
+            return BOTTOM_PLAYER;
+        }
+        else
+        {
+            return TOP_PLAYER;
+        }
+    }
+    return hasWinner(table);
 }
 
 function concatLists(list1, list2)
