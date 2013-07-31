@@ -4,11 +4,10 @@ var searchedSpace = 0;
 function maxValue(table, iteration, alfa, beta, player)
 {
     iteration++;
-    //var winnerPlayer = hasWinner(table, player);
     var winnerPlayer = hasWinner(table);
     if(winnerPlayer != null)
     {
-        return winnerPlayer == player ? Number.MAX_VALUE - iteration : Number.NEGATIVE_INFINITY;
+        return winnerPlayer == player ? NUMBER_MAX_VALUE - iteration : Number.NEGATIVE_INFINITY;
     }
     else if(iteration > currentMaxIteration)
     {
@@ -20,7 +19,7 @@ function maxValue(table, iteration, alfa, beta, player)
     var len = possibleMovements.length;
     if(len == 0)
     {
-        return v;
+        return -1 * (NUMBER_MAX_VALUE - iteration);
     }
 
     for(var i = 0; i < len; i++)
@@ -40,11 +39,10 @@ function maxValue(table, iteration, alfa, beta, player)
 function minValue(table, iteration, alfa, beta, player)
 {
     iteration++;
-    //var winnerPlayer = hasWinner(table, player);
     var winnerPlayer = hasWinner(table);
     if(winnerPlayer != null)
     {
-        return winnerPlayer == player ? Number.MAX_VALUE - iteration : Number.NEGATIVE_INFINITY;
+        return winnerPlayer == player ? NUMBER_MAX_VALUE - iteration : Number.NEGATIVE_INFINITY;
     }
     else if(iteration > currentMaxIteration)
     {
@@ -56,7 +54,7 @@ function minValue(table, iteration, alfa, beta, player)
     len = possibleMovements.length
     if(len == 0)
     {
-        return v;
+        return NUMBER_MAX_VALUE - iteration;
     }
     for(var i = 0; i < len; i++)
     {
@@ -74,9 +72,10 @@ function minValue(table, iteration, alfa, beta, player)
 
 function minimaxDecision(table, player)
 {
-    searchedSpace++
-    currentMaxIteration = Math.floor(MIN_ITERATION + (1 - (getTotalPieces(table) / maxPieces)) * MAX_ITERATION);
-    var date1 = new Date();
+    searchedSpace++;
+    var beg = new Date();
+
+    setCurrentMaxIteration(table);
     var possibleMovements = getPossibleMovements(table, player);
     var bestMovementValue = Number.NEGATIVE_INFINITY;
     var bestMovementIndex = null;
@@ -92,16 +91,20 @@ function minimaxDecision(table, player)
         }
     }
 
-    var date2 = new Date();
+    var end = new Date();
 
-    var diff = date2 - date1;
-
-    console.log(diff / 1000);
-    console.log(currentMaxIteration);
-    console.log(searchedSpace);
+    var diff = end - beg;
+    console.log("Time: " + (diff / 1000));
+    console.log("Depth: " + currentMaxIteration);
+    console.log("Tables Analyzed: " + searchedSpace);
 
     searchedSpace = 0;
     return possibleMovements[bestMovementIndex];
+}
+
+function setCurrentMaxIteration(table)
+{
+    currentMaxIteration = Math.floor(MIN_ITERATION + (1 - (getTotalPieces(table) / maxPieces)) * MAX_ITERATION);
 }
 
 function utility(table, player)

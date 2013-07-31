@@ -10,9 +10,9 @@
     <script src="/js/jquery-2.0.2.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="/js/constants.js"></script>
-    <script src="/js/main.min.js"></script>
-    <script src="/js/checkers.min.js"></script>
-    <script src="/js/minimax.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/checkers.js"></script>
+    <script src="/js/minimax.js"></script>
 </head>
 <body onload="initGame()">
     <div class="game-container">
@@ -33,7 +33,12 @@
                 TBA
             </div>
             <div class="tab-pane" id="about">
-                <strong>Status:</strong> Work in Progress
+                <strong>Developers:</strong>
+                <ul>
+                    <li><a href="https://www.facebook.com/rafaelgrilloabreu" target="_blank">Rafael Grillo</a></li>
+                    <li><a href="https://www.facebook.com/eduardo.jandre" target="_blank">Eduardo Jandre</a></li>
+                </ul>
+                <strong>Status:</strong> Almost finished
                 <br/>
                 <strong>Motivation:</strong> A Project from an IA Class about Minimax Algorithm
                 <br/>
@@ -55,7 +60,7 @@
         <div class="modal-body">
             <a href="javascript:enableIa(true)" class="btn btn-warning btn-large btn-block">Against IA</a>
             <a href="javascript:enableIa(false)" class="btn btn-primary btn-large btn-block">2 Players</a>
-            <a href="javascript:enableIa('ia')" class="btn btn-danger btn-large btn-block">IA vs IA</a>
+            <!--<a href="javascript:enableIa('ia')" class="btn btn-danger btn-large btn-block">IA vs IA</a>-->
         </div>
     </div>
 
