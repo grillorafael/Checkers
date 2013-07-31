@@ -97,6 +97,7 @@ function minimaxDecision(table, player)
     console.log("Time: " + (diff / 1000));
     console.log("Depth: " + currentMaxIteration);
     console.log("Tables Analyzed: " + searchedSpace);
+    console.log("------------");
 
     searchedSpace = 0;
     return possibleMovements[bestMovementIndex];

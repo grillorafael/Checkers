@@ -4,16 +4,16 @@
     <list default="true" id="74d6ffc1-5821-44d4-8e79-f4234186dc67" name="Default" comment="" />
     <ignored path="Checkers.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375028794573" ignored="false" />
+    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375235368261" ignored="false" />
     <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375198889294" ignored="false" />
     <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374632108796" ignored="false" />
     <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374609962486" ignored="false" />
     <file path="/constants.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375198134669" ignored="false" />
-    <file path="/minimax.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375198808456" ignored="false" />
+    <file path="/minimax.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375235386195" ignored="false" />
     <file path="/a.dummy" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374609571847" ignored="false" />
     <file path="$PROJECT_DIR$/../../../Specta/MetaCerta-Tenda/res/layout/activity_desktop.xml" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374156299028" ignored="false" />
     <file path="/reveal.css" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374179794132" ignored="false" />
-    <file path="$PROJECT_DIR$/js/minimax.min.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375198881192" ignored="false" />
+    <file path="$PROJECT_DIR$/js/minimax.min.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375235491864" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -62,7 +63,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -75,7 +75,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="56" selection-start="4868" selection-end="4868" vertical-scroll-proportion="0.6007752">
+            <state line="318" column="0" selection-start="9643" selection-end="9643" vertical-scroll-proportion="0.88372093">
               <folding>
                 <element signature="n#!!block;n#initGame#0" expanded="false" />
                 <element signature="e#390#419#0" expanded="false" />
@@ -157,7 +157,7 @@
       <file leaf-file-name="minimax.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/minimax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="50" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
+            <state line="95" column="25" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -184,7 +184,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="16" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.0">
+            <state line="49" column="99" selection-start="2506" selection-end="2506" vertical-scroll-proportion="-10.625">
               <folding />
             </state>
           </provider>
@@ -207,9 +207,9 @@
         <option value="$PROJECT_DIR$/less/style.less" />
         <option value="$PROJECT_DIR$/js/checkers.js" />
         <option value="$PROJECT_DIR$/js/constants.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/minimax.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -246,7 +246,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -267,6 +266,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -283,8 +283,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -304,6 +304,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -332,19 +345,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -400,7 +400,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -418,7 +418,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20444763" sideWeight="0.6708229" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20444763" sideWeight="0.6708229" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -576,11 +576,6 @@
         <state line="1" column="68" selection-start="37" selection-end="92" vertical-scroll-proportion="0.021037867" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/local_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/modal-gloss.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -603,6 +598,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/checkers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="304" column="9" selection-start="12533" selection-end="12533" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="99" selection-start="2506" selection-end="2506" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/minimax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="25" selection-start="2530" selection-end="2530" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="20" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
@@ -617,30 +633,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="16" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/checkers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="9" selection-start="12533" selection-end="12533" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/minimax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="50" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="56" selection-start="4868" selection-end="4868" vertical-scroll-proportion="0.6007752">
+        <state line="318" column="0" selection-start="9643" selection-end="9643" vertical-scroll-proportion="0.88372093">
           <folding>
             <element signature="n#!!block;n#initGame#0" expanded="false" />
             <element signature="e#390#419#0" expanded="false" />
