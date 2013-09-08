@@ -2,7 +2,7 @@ body{font-family:helvetica;-webkit-touch-callout:none;-webkit-user-select:none;-
 #hint{margin-top:15px}
 #game{position:relative}
 .tab-content{overflow:visible}
-#chat{position:absolute;top:0;right:-200px}#chat ul{padding:5px;margin:0;margin-bottom:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;height:200px;color:#afafaf;border:1px solid #afafaf}#chat ul .external{color:#b1350d}
+#chat{position:absolute;top:0;right:-200px}#chat ul{overflow-y:scroll;padding:5px;margin:0;margin-bottom:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;height:200px;color:#afafaf;border:1px solid #afafaf}#chat ul .external{color:#b1350d}
 #chat ul li{border-bottom:1px dotted #d3d3d3;width:180px;word-wrap:break-word}
 #chat form{margin:0}#chat form textarea{width:180px;margin:0}
 #chat form button{margin-top:5px}

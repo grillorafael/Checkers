@@ -130,14 +130,19 @@ function handleSendMessageSubmit(){
 }
 
 function appendMessage(msg, sent){
+    var date = new Date();
+    var dateText = '('+(date.getHours() > 9 ? date.getHours() : '0'+date.getHours())+':'+(date.getMinutes() > 9 ? date.getMinutes() : '0'+date.getMinutes())+')';
     if(arguments.length == 1)
     {
-        $("#chat").find("ul").append("<li>"+msg+"</li>");
+        $("#chat").find("ul").append("<li>"+dateText + " " + msg+"</li>");
     }
     else
     {
-        $("#chat").find("ul").append("<li class='external'>"+msg+"</li>");
+        $("#chat").find("ul").append("<li class='external'>"+ dateText + " " + msg+"</li>");
     }
+
+    var objDiv = document.getElementById("chatBox");
+    objDiv.scrollTop = objDiv.scrollHeight;
 }
 
 function handleHintClick(button)

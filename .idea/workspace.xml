@@ -4,9 +4,9 @@
     <list default="true" id="74d6ffc1-5821-44d4-8e79-f4234186dc67" name="Default" comment="" />
     <ignored path="Checkers.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378656861169" ignored="false" />
+    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378657595427" ignored="false" />
     <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378656873026" ignored="false" />
-    <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378656802835" ignored="false" />
+    <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378657361963" ignored="false" />
     <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374609962486" ignored="false" />
     <file path="/constants.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375198134669" ignored="false" />
     <file path="/minimax.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1375235386195" ignored="false" />
@@ -26,7 +26,7 @@
     <file path="/project-config.json" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378603440042" ignored="false" />
     <file path="/ppws_server.php" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378603235409" ignored="false" />
     <file path="/dummy.xml" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378655427976" ignored="false" />
-    <file path="$PROJECT_DIR$/css/style.min.css" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378656847853" ignored="false" />
+    <file path="$PROJECT_DIR$/css/style.min.css" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378657548250" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="47" selection-start="770" selection-end="770" vertical-scroll-proportion="-0.35479632">
+            <state line="133" column="156" selection-start="3783" selection-end="3783" vertical-scroll-proportion="0.3718791">
               <folding />
             </state>
           </provider>
@@ -97,7 +97,7 @@
       <file leaf-file-name="style.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="43" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+            <state line="18" column="59" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,7 +106,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="44" selection-start="1396" selection-end="1396" vertical-scroll-proportion="-11.25">
+            <state line="28" column="39" selection-start="1469" selection-end="1476" vertical-scroll-proportion="-12.5">
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -593,14 +593,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/less/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="43" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+        <state line="18" column="59" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="44" selection-start="1396" selection-end="1396" vertical-scroll-proportion="-11.25">
+        <state line="28" column="39" selection-start="1469" selection-end="1476" vertical-scroll-proportion="-12.5">
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -609,7 +609,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="47" selection-start="770" selection-end="770" vertical-scroll-proportion="-0.35479632">
+        <state line="133" column="156" selection-start="3783" selection-end="3783" vertical-scroll-proportion="0.3718791">
           <folding />
         </state>
       </provider>
