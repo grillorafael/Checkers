@@ -4,7 +4,7 @@
     <list default="true" id="74d6ffc1-5821-44d4-8e79-f4234186dc67" name="Default" comment="" />
     <ignored path="Checkers.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378663916006" ignored="false" />
+    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378664009190" ignored="false" />
     <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378656873026" ignored="false" />
     <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378657361963" ignored="false" />
     <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374609962486" ignored="false" />
@@ -106,7 +106,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="28" selection-start="492" selection-end="492" vertical-scroll-proportion="0.28493893">
+            <state line="13" column="34" selection-start="429" selection-end="429" vertical-scroll-proportion="0.26458615">
               <folding />
             </state>
           </provider>
@@ -603,7 +603,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="492" selection-end="492" vertical-scroll-proportion="0.28493893">
+        <state line="13" column="34" selection-start="429" selection-end="429" vertical-scroll-proportion="0.26458615">
           <folding />
         </state>
       </provider>
