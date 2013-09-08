@@ -7,12 +7,9 @@
     <link rel="stylesheet" type="text/css" href="/css/style.min.css"/>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 
-    <script src="/js/jquery-2.0.2.min.js"></script>
+    <script src="/js/application.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src="/js/constants.js"></script>
-    <script src="/js/main.min.js"></script>
-    <script src="/js/checkers.min.js"></script>
-    <script src="/js/minimax.min.js"></script>
+
 </head>
 <body onload="initGame()">
     <div class="game-container">
@@ -60,6 +57,7 @@
         <div class="modal-body">
             <a href="javascript:enableIa(true)" class="btn btn-warning btn-large btn-block">Against IA</a>
             <a href="javascript:enableIa(false)" class="btn btn-primary btn-large btn-block">2 Players</a>
+            <a href="javascript:againstRandom()" class="btn btn-danger btn-large btn-block">Against Random</a>
             <!--<a href="javascript:enableIa('ia')" class="btn btn-danger btn-large btn-block">IA vs IA</a>-->
         </div>
     </div>

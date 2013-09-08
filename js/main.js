@@ -3,9 +3,17 @@ var tableSize = 8;
 var ANIMATION_SPEED = 500;
 var ENABLE_HINT = false;
 var currentTurn = TOP_PLAYER;
-var ENABLE_IA = true;
+var ENABLE_IA = false;
 var IA_VS_IA = false;
+var RANDOM_PLAYER = false;
 var maxPieces;
+var ws;
+
+function write(text) {
+    var date = new Date();
+    var dateText = '['+date.getFullYear()+'-'+(date.getMonth()+1 > 9 ? date.getMonth()+1 : '0'+date.getMonth()+1)+'-'+(date.getDate() > 9 ? date.getDate() : '0'+date.getDate())+' '+(date.getHours() > 9 ? date.getHours() : '0'+date.getHours())+':'+(date.getMinutes() > 9 ? date.getMinutes() : '0'+date.getMinutes())+':'+(date.getSeconds() > 9 ? date.getSeconds() : '0'+date.getSeconds())+']';
+    console.log(dateText + ' ' + text);
+}
 
 function initGame()
 {
@@ -17,6 +25,25 @@ function initGame()
     $('#gameConfigModal').on('hidden', function(){
         changeTurn();
     })
+}
+
+function againstRandom(){
+    var url = "ws://127.0.0.1:5001";
+    ws = new WebSocket(url);
+    write("Connecting to the WebSocket...");
+
+    ws.onopen = function(msg) {
+        write('Connection successfully opened');
+    };
+
+    ws.onmessage = function(msg){
+        console.log(msg);
+        var parsedMsg = JSON.parse(msg.data);
+        movePiece(parsedMsg.arg0, parsedMsg.arg1, parsedMsg.arg2)
+        console.log(parsedMsg);
+    }
+
+    $('#gameConfigModal').modal('hide');
 }
 
 function enableIa(value)
@@ -90,6 +117,7 @@ function handleCellClick(cell)
                     if(possibleMoveMovements[i].row == toPositionObject.row && possibleMoveMovements[i].column == toPositionObject.column)
                     {
                         movePiece(positionObject, [toPositionObject], []);
+                        ws.send(JSON.stringify({type: MOVE_PIECE, arg0: positionObject, arg1:[toPositionObject], arg2: []}));
                         return;
                     }
                 }
@@ -104,6 +132,8 @@ function handleCellClick(cell)
                     if(lastMovementPosition.row == toPositionObject.row && lastMovementPosition.column == toPositionObject.column)
                     {
                         movePiece(positionObject, possibleEatMovement.movementPositions, possibleEatMovement.removedPiecesPosition);
+                        ws.send(JSON.stringify({type: EAT_PIECE, arg0: positionObject, arg1:possibleEatMovement.movementPositions,  arg2: possibleEatMovement.removedPiecesPosition}));
+                        return;
                     }
                 }
             }
