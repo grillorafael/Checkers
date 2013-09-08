@@ -9,6 +9,8 @@ var RANDOM_PLAYER = false;
 
 var PLAYER = BOTTOM_PLAYER;
 
+var MESSAGE_TYPE = -1;
+
 var maxPieces;
 var ws;
 var paired = false;
@@ -39,6 +41,7 @@ function getConfig(callback){
 
 function againstRandom(){
     $("#gameMode").toggleClass("hidden");
+    $("#chat").removeClass("hidden");
     $("#waiting").toggleClass("hidden");
     RANDOM_PLAYER = true;
     getConfig(function(config){
@@ -51,7 +54,6 @@ function againstRandom(){
         };
 
         ws.onmessage = function(msg){
-            console.log(msg);
             if(msg.data == "change_player"){
                 PLAYER = TOP_PLAYER;
             }
@@ -67,17 +69,22 @@ function againstRandom(){
             }
             else{
                 var parsedMsg = JSON.parse(msg.data);
-                movePiece(parsedMsg.arg0, parsedMsg.arg1, parsedMsg.arg2);
+                if(parsedMsg.type == MESSAGE_TYPE)
+                {
+                    appendMessage(parsedMsg.msg, true);
+                }
+                else
+                {
+                    movePiece(parsedMsg.arg0, parsedMsg.arg1, parsedMsg.arg2);
+                }
             }
         }
 
         ws.onerror = function(msg){
             $('#disconnectedModal').modal('show');
-            console.log(msg);
         }
 
         ws.onclose = function(msg){
-            console.log(msg);
         }
     });
 }
@@ -102,9 +109,35 @@ function addEventListeners()
     $(".checkers-piece").click(function(){handlePieceClick(this);});
     $("#hint").click(function(){handleHintClick(this);});
 
+    $("#sendMessage").submit(function(e){
+        e.preventDefault();
+        handleSendMessageSubmit();
+    });
+
     $(window).resize(function() {
         adjustSizes();
     });
+}
+
+function handleSendMessageSubmit(){
+    var msg = $("#sendMessage").find("textarea").val().escape();
+    appendMessage(msg);
+    if(RANDOM_PLAYER)
+    {
+        ws.send(JSON.stringify({type: MESSAGE_TYPE, msg: msg.escape()}));
+    }
+    $("#sendMessage").find("textarea").val("");
+}
+
+function appendMessage(msg, sent){
+    if(arguments.length == 1)
+    {
+        $("#chat").find("ul").append("<li>"+msg+"</li>");
+    }
+    else
+    {
+        $("#chat").find("ul").append("<li class='external'>"+msg+"</li>");
+    }
 }
 
 function handleHintClick(button)
@@ -419,3 +452,14 @@ function changeTurn()
         $("#turnShower").attr("data-color", currentTurn);
     }
 }
+
+String.prototype.escape = function() {
+    var tagsToReplace = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;'
+    };
+    return this.replace(/[&<>]/g, function(tag) {
+        return tagsToReplace[tag] || tag;
+    });
+};

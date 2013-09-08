@@ -4,8 +4,8 @@
     <title>Checkers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/style.min.css"/>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.min.css"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
     <script src="/js/application.min.js"></script>
@@ -24,8 +24,20 @@
         <div class="tab-content">
             <div id="game" class="tab-pane active">
                 <div id="checkersTable"></div>
+                <div id="chat" class="hidden">
+                    <div class="row">
+                        <ul></ul>
+                    </div>
+                    <form id="sendMessage">
+                        <div class="row">
+                            <textarea id="chatMessage" rows="2" placeholder="Please, type a message to your friend!"></textarea>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-block btn-primary" href="">Send</button>
+                        </div>
+                    </form>
+                </div>
                 <div id="turnShower" data-color="0"> CURRENT TURN </div>
-                <br/>
                 <a id="hint" class="btn btn-block btn-warning btn-large " data-toggle="button">I NEED A HINT!</a>
             </div>
             <div class="tab-pane" id="rules">
