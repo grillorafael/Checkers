@@ -4,7 +4,7 @@
     <list default="true" id="74d6ffc1-5821-44d4-8e79-f4234186dc67" name="Default" comment="" />
     <ignored path="Checkers.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378657595427" ignored="false" />
+    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378663832163" ignored="false" />
     <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378656873026" ignored="false" />
     <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378657361963" ignored="false" />
     <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374609962486" ignored="false" />
@@ -41,6 +41,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -75,7 +76,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -85,10 +85,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="156" selection-start="3783" selection-end="3783" vertical-scroll-proportion="0.3718791">
+            <state line="140" column="30" selection-start="3951" selection-end="3951" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,13 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="39" selection-start="1469" selection-end="1476" vertical-scroll-proportion="-12.5">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="10" column="66" selection-start="341" selection-end="341" vertical-scroll-proportion="0.20352781">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,7 +124,7 @@
       <file leaf-file-name="Server.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websocket/Server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="231" column="13" selection-start="7491" selection-end="7491" vertical-scroll-proportion="-11.083333">
+            <state line="231" column="13" selection-start="7491" selection-end="7491" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -191,8 +189,8 @@
         <option value="$PROJECT_DIR$/project-config.json" />
         <option value="$PROJECT_DIR$/websocket/Server.php" />
         <option value="$PROJECT_DIR$/less/style.less" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -229,6 +227,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,8 +291,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,8 +306,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -329,6 +327,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -357,19 +368,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -443,7 +441,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20444763" sideWeight="0.6708229" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11979914" sideWeight="0.6708229" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -532,9 +530,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/websocket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="55" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="55" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/application.js">
@@ -586,7 +582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/websocket/Server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="13" selection-start="7491" selection-end="7491" vertical-scroll-proportion="-11.083333">
+        <state line="231" column="13" selection-start="7491" selection-end="7491" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -598,18 +594,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="39" selection-start="1469" selection-end="1476" vertical-scroll-proportion="-12.5">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="140" column="30" selection-start="3951" selection-end="3951" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="156" selection-start="3783" selection-end="3783" vertical-scroll-proportion="0.3718791">
+        <state line="10" column="66" selection-start="341" selection-end="341" vertical-scroll-proportion="0.20352781">
           <folding />
         </state>
       </provider>
