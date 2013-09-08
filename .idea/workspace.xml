@@ -4,7 +4,7 @@
     <list default="true" id="74d6ffc1-5821-44d4-8e79-f4234186dc67" name="Default" comment="" />
     <ignored path="Checkers.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378614994566" ignored="false" />
+    <file path="/index.html" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378650931362" ignored="false" />
     <file path="/main.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378613008773" ignored="false" />
     <file path="/style.less" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1378606687321" ignored="false" />
     <file path="/checkers.js" changelist="74d6ffc1-5821-44d4-8e79-f4234186dc67" time="1374609962486" ignored="false" />
@@ -41,6 +41,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -75,7 +76,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -151,8 +151,10 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="38" selection-start="4334" selection-end="4334" vertical-scroll-proportion="0.6492435">
-              <folding />
+            <state line="15" column="69" selection-start="748" selection-end="748" vertical-scroll-proportion="0.31512606">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -236,8 +238,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,6 +300,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,8 +317,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -336,6 +338,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -364,19 +379,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -534,9 +536,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/checkers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="378" column="9" selection-start="14159" selection-end="14159" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="378" column="9" selection-start="14159" selection-end="14159" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/websocket.js">
@@ -581,9 +581,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/application.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="661" selection-start="913" selection-end="913" vertical-scroll-proportion="0.08130081">
-          <folding />
-        </state>
+        <state line="4" column="661" selection-start="913" selection-end="913" vertical-scroll-proportion="0.08130081" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/less/style.less">
@@ -616,8 +614,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="38" selection-start="4334" selection-end="4334" vertical-scroll-proportion="0.6492435">
-          <folding />
+        <state line="15" column="69" selection-start="748" selection-end="748" vertical-scroll-proportion="0.31512606">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
