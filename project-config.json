@@ -1,0 +1,19 @@
+{
+    "dev": true,
+    "development":{
+        "web_socket": {
+            "enabled": false,
+            "ip" : "127.0.0.1",
+            "js_host" : "127.0.0.1",
+            "port": "5001"
+        }
+    },
+    "production":{
+        "web_socket": {
+            "enabled": false,
+            "js_host" : "checkers.rgrillo.com",
+            "ip" : "10.252.9.121",
+            "port": "5001"
+        }
+    }
+}

@@ -27,23 +27,31 @@ function initGame()
     })
 }
 
+function getConfig(callback){
+    $.getJSON("/project-config.json", function(data) {
+        callback(data.dev ? data.development : data.production);
+    });
+}
+
 function againstRandom(){
-    var url = "ws://127.0.0.1:5001";
-    ws = new WebSocket(url);
-    write("Connecting to the WebSocket...");
+    getConfig(function(config){
+        var url = "ws://" + config.web_socket.js_host + ":" + config.web_socket.port;
+        ws = new WebSocket(url);
+        write("Connecting to the WebSocket...");
 
-    ws.onopen = function(msg) {
-        write('Connection successfully opened');
-    };
+        ws.onopen = function(msg) {
+            write('Connection successfully opened');
+        };
 
-    ws.onmessage = function(msg){
-        console.log(msg);
-        var parsedMsg = JSON.parse(msg.data);
-        movePiece(parsedMsg.arg0, parsedMsg.arg1, parsedMsg.arg2)
-        console.log(parsedMsg);
-    }
+        ws.onmessage = function(msg){
+            console.log(msg);
+            var parsedMsg = JSON.parse(msg.data);
+            movePiece(parsedMsg.arg0, parsedMsg.arg1, parsedMsg.arg2);
+            console.log(parsedMsg);
+        }
 
-    $('#gameConfigModal').modal('hide');
+        $('#gameConfigModal').modal('hide');
+    });
 }
 
 function enableIa(value)
@@ -131,9 +139,9 @@ function handleCellClick(cell)
                     var lastMovementPosition = possibleEatMovement.movementPositions[possibleEatMovement.movementPositions.length - 1];
                     if(lastMovementPosition.row == toPositionObject.row && lastMovementPosition.column == toPositionObject.column)
                     {
+                        var strsend = JSON.stringify({type: EAT_PIECE, arg0: positionObject, arg1:possibleEatMovement.movementPositions,  arg2: possibleEatMovement.removedPiecesPosition});
+                        ws.send(strsend);
                         movePiece(positionObject, possibleEatMovement.movementPositions, possibleEatMovement.removedPiecesPosition);
-                        ws.send(JSON.stringify({type: EAT_PIECE, arg0: positionObject, arg1:possibleEatMovement.movementPositions,  arg2: possibleEatMovement.removedPiecesPosition}));
-                        return;
                     }
                 }
             }

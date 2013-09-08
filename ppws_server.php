@@ -21,12 +21,13 @@ error_reporting(E_ALL);
 
 require_once 'websocket/Server.php';
 require_once 'websocket/Client.php';
+include 'Config.php';
 
 set_time_limit(0);
 
 // variables
-$address = "127.0.0.1";
-$port = "5001";
+$address = Config::getWebSocketIp();
+$port = Config::getWebSocketPort();
 $verboseMode = true;
 
 $server = new Server($address, $port, $verboseMode);
