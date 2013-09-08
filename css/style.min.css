@@ -1,4 +1,6 @@
 body{font-family:helvetica;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-size:14px}
+.text-center{text-align:center}
+.hidden{display:none}
 .clear-fix{clear:both}
 .button:hover{cursor:pointer}
 .button{-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px}

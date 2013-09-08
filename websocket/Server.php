@@ -105,6 +105,9 @@ class Server
             $clientToConnect->setClient($client);
             $client->setClient($clientToConnect);
 
+            $this->send($clientToConnect, "paired");
+            $this->send($clientToConnect, "change_player");
+
             $this->console("Linking Client #{$client->getId()} with Client #{$clientToConnect->getId()}");
         }
         else{
@@ -114,6 +117,7 @@ class Server
         $this->clients[] = $client;
 
         $this->sockets[] = $socket;
+
         $this->console("Client #{$client->getId()} is successfully created!");
     }
 
@@ -178,19 +182,34 @@ class Server
      */
     private function disconnect($client)
     {
+        if($client->getClient()){
+            $this->send($client->getClient(), "disconnected");
+        }
+
         $this->console("Disconnecting client #{$client->getId()}");
+
+        $k = array_search($client, $this->pendingClients);
         $i = array_search($client, $this->clients);
         $j = array_search($client->getSocket(), $this->sockets);
 
         if ($j >= 0) {
             array_splice($this->sockets, $j, 1);
-            socket_shutdown($client->getSocket(), 2);
-            socket_close($client->getSocket());
+            //TODO UNDERSTAND WHY THIS IS NOT WORKING
+            //socket_shutdown($client->getSocket(), 2);
+            //socket_close($client->getSocket());
             $this->console("Socket closed");
         }
 
         if ($i >= 0)
             array_splice($this->clients, $i, 1);
+        if ($k >= 0)
+            array_splice($this->pendingClients, $k, 1);
+
+        $pendingClients = count($this->pendingClients);
+        $clients = count($this->clients);
+
+        $this->console("Pending Clients #{$pendingClients}");
+        $this->console("Clients #{$clients}");
         $this->console("Client #{$client->getId()} disconnected");
     }
 

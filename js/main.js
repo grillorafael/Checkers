@@ -6,8 +6,12 @@ var currentTurn = TOP_PLAYER;
 var ENABLE_IA = false;
 var IA_VS_IA = false;
 var RANDOM_PLAYER = false;
+
+var PLAYER = BOTTOM_PLAYER;
+
 var maxPieces;
 var ws;
+var paired = false;
 
 function write(text) {
     var date = new Date();
@@ -34,6 +38,9 @@ function getConfig(callback){
 }
 
 function againstRandom(){
+    $("#gameMode").toggleClass("hidden");
+    $("#waiting").toggleClass("hidden");
+    RANDOM_PLAYER = true;
     getConfig(function(config){
         var url = "ws://" + config.web_socket.js_host + ":" + config.web_socket.port;
         ws = new WebSocket(url);
@@ -45,12 +52,33 @@ function againstRandom(){
 
         ws.onmessage = function(msg){
             console.log(msg);
-            var parsedMsg = JSON.parse(msg.data);
-            movePiece(parsedMsg.arg0, parsedMsg.arg1, parsedMsg.arg2);
-            console.log(parsedMsg);
+            if(msg.data == "change_player"){
+                PLAYER = TOP_PLAYER;
+            }
+            else if(msg.data == 'disconnected'){
+                $('#disconnectedModal').modal('show');
+            }
+            else if(msg.data == "paired"){
+                $('#gameConfigModal').modal('hide');
+                if(!paired){
+                    paired = true;
+                    ws.send("paired");
+                }
+            }
+            else{
+                var parsedMsg = JSON.parse(msg.data);
+                movePiece(parsedMsg.arg0, parsedMsg.arg1, parsedMsg.arg2);
+            }
         }
 
-        $('#gameConfigModal').modal('hide');
+        ws.onerror = function(msg){
+            $('#disconnectedModal').modal('show');
+            console.log(msg);
+        }
+
+        ws.onclose = function(msg){
+            console.log(msg);
+        }
     });
 }
 
@@ -96,13 +124,12 @@ function handleHintClick(button)
         }
         $("#hint").html("I DON'T NEED ANY HINT!");
     }
-    //$("#hint").attr("data-state", ENABLE_HINT);
 }
 
 function handleCellClick(cell)
 {
     var selectedPiece = $(".checkers-piece.selected");
-    if(selectedPiece)
+    if(selectedPiece && (currentTurn == PLAYER || !RANDOM_PLAYER))
     {
         var pieceColor = selectedPiece.attr("data-color");
         if(currentTurn == pieceColor)
@@ -125,7 +152,10 @@ function handleCellClick(cell)
                     if(possibleMoveMovements[i].row == toPositionObject.row && possibleMoveMovements[i].column == toPositionObject.column)
                     {
                         movePiece(positionObject, [toPositionObject], []);
-                        ws.send(JSON.stringify({type: MOVE_PIECE, arg0: positionObject, arg1:[toPositionObject], arg2: []}));
+                        if(RANDOM_PLAYER)
+                        {
+                            ws.send(JSON.stringify({type: MOVE_PIECE, arg0: positionObject, arg1:[toPositionObject], arg2: []}));
+                        }
                         return;
                     }
                 }
@@ -139,8 +169,11 @@ function handleCellClick(cell)
                     var lastMovementPosition = possibleEatMovement.movementPositions[possibleEatMovement.movementPositions.length - 1];
                     if(lastMovementPosition.row == toPositionObject.row && lastMovementPosition.column == toPositionObject.column)
                     {
-                        var strsend = JSON.stringify({type: EAT_PIECE, arg0: positionObject, arg1:possibleEatMovement.movementPositions,  arg2: possibleEatMovement.removedPiecesPosition});
-                        ws.send(strsend);
+                        if(RANDOM_PLAYER)
+                        {
+                            var strsend = JSON.stringify({type: EAT_PIECE, arg0: positionObject, arg1:possibleEatMovement.movementPositions,  arg2: possibleEatMovement.removedPiecesPosition});
+                            ws.send(strsend);
+                        }
                         movePiece(positionObject, possibleEatMovement.movementPositions, possibleEatMovement.removedPiecesPosition);
                     }
                 }
@@ -151,22 +184,25 @@ function handleCellClick(cell)
 
 function handlePieceClick(piece)
 {
-    var hasClass = $(piece).hasClass("selected");
-    removeCellHighlights();
-    removePieceSelections();
-
-    var pieceColor = $(piece).attr("data-color");
-    if(pieceColor == currentTurn)
+    if(currentTurn == PLAYER || !RANDOM_PLAYER)
     {
-        if(!hasClass)
+        var hasClass = $(piece).hasClass("selected");
+        removeCellHighlights();
+        removePieceSelections();
+
+        var pieceColor = $(piece).attr("data-color");
+        if(pieceColor == currentTurn)
         {
-            $(piece).toggleClass("selected");
+            if(!hasClass)
+            {
+                $(piece).toggleClass("selected");
+            }
         }
-    }
 
-    if(ENABLE_HINT &&  $(piece).hasClass("selected"))
-    {
-        highlightMoves($(piece));
+        if(ENABLE_HINT &&  $(piece).hasClass("selected"))
+        {
+            highlightMoves($(piece));
+        }
     }
 }
 
