@@ -124,7 +124,7 @@
       <file leaf-file-name="Server.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/websocket/Server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="80" selection-start="6378" selection-end="6378" vertical-scroll-proportion="0.39466667">
+            <state line="206" column="51" selection-start="6918" selection-end="6918" vertical-scroll-proportion="0.61466664">
               <folding />
             </state>
           </provider>
@@ -604,7 +604,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/websocket/Server.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="80" selection-start="6378" selection-end="6378" vertical-scroll-proportion="0.39466667">
+        <state line="206" column="51" selection-start="6918" selection-end="6918" vertical-scroll-proportion="0.61466664">
           <folding />
         </state>
       </provider>

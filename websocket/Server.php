@@ -204,6 +204,7 @@ class Server
             //socket_shutdown($client->getSocket(), 0);//close reading
             //socket_close($client->getSocket());//finaly we can free resource
 
+            posix_kill($client->getPid(), SIGTERM);
             $this->console("Socket closed");
         }
 
