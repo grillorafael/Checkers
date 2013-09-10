@@ -111,10 +111,10 @@ class Server
             $this->console("Linking Client #{$client->getId()} with Client #{$clientToConnect->getId()}");
         }
         else{
-            $this->pendingClients[] = $client;
+            $this->pendingClients[$socket] = $client;
         }
 
-        $this->clients[] = $client;
+        $this->clients[$socket] = $client;
 
         $this->sockets[] = $socket;
 
@@ -188,8 +188,9 @@ class Server
 
         $this->console("Disconnecting client #{$client->getId()}");
 
-        $k = array_search($client, $this->pendingClients);
-        $i = array_search($client, $this->clients);
+        unset($this->clients[$client->getSocket()]);
+        unset($this->pendingClients[$client->getSocket()]);
+
         $j = array_search($client->getSocket(), $this->sockets);
 
         if ($j >= 0) {
@@ -197,13 +198,14 @@ class Server
             //TODO UNDERSTAND WHY THIS IS NOT WORKING
             //socket_shutdown($client->getSocket(), 2);
             //socket_close($client->getSocket());
+
+            //socket_shutdown($client->getSocket(), 1);//remote host yet can read
+            //usleep(500);//wait remote host
+            //socket_shutdown($client->getSocket(), 0);//close reading
+            //socket_close($client->getSocket());//finaly we can free resource
+
             $this->console("Socket closed");
         }
-
-        if ($i >= 0)
-            array_splice($this->clients, $i, 1);
-        if ($k >= 0)
-            array_splice($this->pendingClients, $k, 1);
 
         $pendingClients = count($this->pendingClients);
         $clients = count($this->clients);
@@ -220,12 +222,7 @@ class Server
      */
     private function getClientBySocket($socket)
     {
-        foreach ($this->clients as $client)
-            if ($client->getSocket() == $socket) {
-                $this->console("Client found");
-                return $client;
-            }
-        return false;
+        return isset($this->clients[$socket]) ? $this->clients[$socket] : false;
     }
 
     /**
