@@ -329,10 +329,12 @@ class Server
     {
         $this->console("Send '" . $text . "' to client #{$client->getId()}");
         $text = $this->encode($text);
-        if (socket_write($client->getSocket(), $text, strlen($text)) === false) {
-            $client->exists = false; //flag the client as broken
-            $this->console("Unable to write to client #{$client->getId()}'s socket");
-            $this->disconnect($client);
+        if(isset($this->clients[$client->getSocket()])){
+            if (socket_write($client->getSocket(), $text, strlen($text)) === false) {
+                $client->exists = false; //flag the client as broken
+                $this->console("Unable to write to client #{$client->getId()}'s socket");
+                $this->disconnect($client);
+            }
         }
     }
 
